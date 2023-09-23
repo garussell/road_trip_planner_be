@@ -3,12 +3,12 @@ class Forecast
 
   def initialize(data)
     @id = nil
-    @current_weather = current_weather(data[:current])
-    @daily_weather = daily_weather(data[:forecast][:forecastday])
-    @hourly_weather = hourly_weather(data[:forecast][:forecastday][0][:hour])
+    @current_weather = check_current_weather(data[:current])
+    @daily_weather = check_daily_weather(data[:forecast][:forecastday])
+    @hourly_weather = check_hourly_weather(data[:forecast][:forecastday][0][:hour])
   end
 
-  def current_weather(data)
+  def check_current_weather(data)
     {
       last_updated: data[:last_updated],
       temperature: data[:temp_f],
@@ -21,7 +21,7 @@ class Forecast
     }
   end
 
-  def daily_weather(data)
+  def check_daily_weather(data)
     data.map do |day|
       {
         date: day[:date],
@@ -35,7 +35,7 @@ class Forecast
     end
   end
 
-  def hourly_weather(data)
+  def check_hourly_weather(data)
     data.map do |hour|
       {
         time: format_time(hour[:time]),

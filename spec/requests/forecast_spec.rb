@@ -89,6 +89,122 @@ RSpec.describe "Forecast", type: :request do
         expect(forecast[:attributes][:hourly_weather][0]).to have_key(:icon)
         expect(forecast[:attributes][:hourly_weather][0][:icon]).to be_a(String)
       end
+
+      it "does not return unnecessary data" do
+        location = "denver,co"
+        get "/api/v0/forecast?location=#{location}"
+
+        expect(response).to be_successful
+
+        response_data = JSON.parse(response.body, symbolize_names: true)
+        forecast = response_data[:data]
+
+        # Current Weather
+        expect(forecast[:attributes][:current_weather]).to_not have_key(:last_updated_epoch)
+
+        expect(forecast[:attributes][:current_weather]).to_not have_key(:temp_c)
+        expect(forecast[:attributes][:current_weather]).to_not have_key(:temp_f)
+
+        expect(forecast[:attributes][:current_weather]).to_not have_key(:is_day)
+
+        expect(forecast[:attributes][:current_weather]).to_not have_key(:wind_mph)
+        expect(forecast[:attributes][:current_weather]).to_not have_key(:wind_kph)
+
+        expect(forecast[:attributes][:current_weather]).to_not have_key(:wind_degree)
+        expect(forecast[:attributes][:current_weather]).to_not have_key(:wind_dir)
+
+        expect(forecast[:attributes][:current_weather]).to_not have_key(:pressure_mb)
+        expect(forecast[:attributes][:current_weather]).to_not have_key(:pressure_in)
+
+        expect(forecast[:attributes][:current_weather]).to_not have_key(:precip_mm)
+        expect(forecast[:attributes][:current_weather]).to_not have_key(:precip_in)
+
+        expect(forecast[:attributes][:current_weather]).to_not have_key(:cloud)
+
+        expect(forecast[:attributes][:current_weather]).to_not have_key(:feels_like_c)
+        expect(forecast[:attributes][:current_weather]).to_not have_key(:feels_like_f)
+
+        expect(forecast[:attributes][:current_weather]).to_not have_key(:vis_km)  
+
+        expect(forecast[:attributes][:current_weather]).to_not have_key(:gust_mph)
+        expect(forecast[:attributes][:current_weather]).to_not have_key(:gust_kph)
+      
+        # Daily Weather
+        expect(forecast[:attributes][:daily_weather][0]).to_not have_key(:maxtemp_c)
+        expect(forecast[:attributes][:daily_weather][0]).to_not have_key(:maxtemp_f)
+
+        expect(forecast[:attributes][:daily_weather][0]).to_not have_key(:mintemp_c)
+        expect(forecast[:attributes][:daily_weather][0]).to_not have_key(:mintemp_f)
+
+        expect(forecast[:attributes][:daily_weather][0]).to_not have_key(:avgtemp_c)
+        expect(forecast[:attributes][:daily_weather][0]).to_not have_key(:avgtemp_f)
+
+        expect(forecast[:attributes][:daily_weather][0]).to_not have_key(:maxwind_mph)
+        expect(forecast[:attributes][:daily_weather][0]).to_not have_key(:maxwind_kph)
+
+        expect(forecast[:attributes][:daily_weather][0]).to_not have_key(:totalprecip_mm)
+        expect(forecast[:attributes][:daily_weather][0]).to_not have_key(:totalprecip_in)
+
+        expect(forecast[:attributes][:daily_weather][0]).to_not have_key(:totalsnow_cm)
+
+        expect(forecast[:attributes][:daily_weather][0]).to_not have_key(:avgvis_km)
+        expect(forecast[:attributes][:daily_weather][0]).to_not have_key(:avgvis_miles)
+
+        expect(forecast[:attributes][:daily_weather][0]).to_not have_key(:avghumidity)
+        expect(forecast[:attributes][:daily_weather][0]).to_not have_key(:uv)
+
+        expect(forecast[:attributes][:daily_weather][0]).to_not have_key(:daily_will_it_rain)
+        expect(forecast[:attributes][:daily_weather][0]).to_not have_key(:daily_chance_of_rain)
+
+        expect(forecast[:attributes][:daily_weather][0]).to_not have_key(:daily_will_it_snow)
+        expect(forecast[:attributes][:daily_weather][0]).to_not have_key(:daily_chance_of_snow)
+
+        # Hourly Weather
+        expect(forecast[:attributes][:hourly_weather][0]).to_not have_key(:time_epoch)
+        expect(forecast[:attributes][:hourly_weather][0]).to_not have_key(:temp_c)
+
+        expect(forecast[:attributes][:hourly_weather][0]).to_not have_key(:is_day)
+
+        expect(forecast[:attributes][:hourly_weather][0]).to_not have_key(:wind_mph)
+        expect(forecast[:attributes][:hourly_weather][0]).to_not have_key(:wind_kph)
+        expect(forecast[:attributes][:hourly_weather][0]).to_not have_key(:wind_degree)
+        expect(forecast[:attributes][:hourly_weather][0]).to_not have_key(:wind_dir)
+        
+        expect(forecast[:attributes][:hourly_weather][0]).to_not have_key(:pressure_in)
+        expect(forecast[:attributes][:hourly_weather][0]).to_not have_key(:pressure_mb)
+        
+        expect(forecast[:attributes][:hourly_weather][0]).to_not have_key(:precip_in)
+        expect(forecast[:attributes][:hourly_weather][0]).to_not have_key(:precip_mm)
+        
+        expect(forecast[:attributes][:hourly_weather][0]).to_not have_key(:humidity)
+        expect(forecast[:attributes][:hourly_weather][0]).to_not have_key(:cloud)
+        
+        expect(forecast[:attributes][:hourly_weather][0]).to_not have_key(:feelslike_c)
+        expect(forecast[:attributes][:hourly_weather][0]).to_not have_key(:feelslike_f)
+
+        expect(forecast[:attributes][:hourly_weather][0]).to_not have_key(:windchill_c)
+        expect(forecast[:attributes][:hourly_weather][0]).to_not have_key(:windchill_f)
+
+        expect(forecast[:attributes][:hourly_weather][0]).to_not have_key(:heatindex_c)
+        expect(forecast[:attributes][:hourly_weather][0]).to_not have_key(:heatindex_f)
+
+        expect(forecast[:attributes][:hourly_weather][0]).to_not have_key(:dewpoint_c)
+        expect(forecast[:attributes][:hourly_weather][0]).to_not have_key(:dewpoint_f)
+
+        expect(forecast[:attributes][:hourly_weather][0]).to_not have_key(:will_it_rain)
+        expect(forecast[:attributes][:hourly_weather][0]).to_not have_key(:chance_of_rain)
+
+        expect(forecast[:attributes][:hourly_weather][0]).to_not have_key(:will_it_snow)
+        expect(forecast[:attributes][:hourly_weather][0]).to_not have_key(:chance_of_snow)
+        
+        expect(forecast[:attributes][:hourly_weather][0]).to_not have_key(:vis_km)
+        expect(forecast[:attributes][:hourly_weather][0]).to_not have_key(:vis_miles)
+
+        expect(forecast[:attributes][:hourly_weather][0]).to_not have_key(:gust_mph)
+        expect(forecast[:attributes][:hourly_weather][0]).to_not have_key(:gust_kph)
+        
+        expect(forecast[:attributes][:hourly_weather][0]).to_not have_key(:uv)
+      end
     end
 
     context "sad path - with invalid params" do
