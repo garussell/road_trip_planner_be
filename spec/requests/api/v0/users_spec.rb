@@ -10,7 +10,8 @@ RSpec.describe "Register Users" do
           password_confirmation: "password"
           }
 
-        post "/api/v0/users", params: {user: user_params}
+        post "/api/v0/users", params: user_params
+      
         expect(response).to be_successful
         expect(response.status).to eq(201)
         
@@ -45,9 +46,28 @@ RSpec.describe "Register Users" do
           password_confirmation: "wrongpassword"
           }
 
-        post "/api/v0/users", params: {user: user_params}
+        post "/api/v0/users", params: user_params
         expect(response).to_not be_successful
+
         expect(response.status).to eq(422)
+        expect(response.body).to eq("{\"errors\":[{\"detail\":\"Invalid Parameters\"}]}")
+      end
+
+      it "returns a 422 status code if user already exists" do
+        user_params = {
+          email: "veryfake@gmail.com",
+          password: "password",
+          password_confirmation: "password"
+          }
+
+          post "/api/v0/users", params: user_params
+          expect(response).to be_successful
+
+          post "/api/v0/users", params: user_params
+          expect(response).to_not be_successful
+          
+          expect(response.status).to eq(422)
+          expect(response.body).to eq("{\"errors\":[{\"detail\":\"Email already exists\"}]}")
       end
     end
   end
