@@ -6,6 +6,10 @@ class User < ApplicationRecord
 
   has_secure_password
 
+  def self.authenticate(api_key)
+    User.find_by(api_key: api_key)
+  end
+
   private
   
   def generate_api_key
