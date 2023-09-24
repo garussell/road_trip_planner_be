@@ -16,24 +16,32 @@ class RoadTrip
   end
 
   def calculate_weather_at_eta
-    coordinates = MapQuestFacade.new(@end_city).get_coordinates
-    lat = coordinates.lat
-    lng = coordinates.lng
+    if @eta_time
+      coordinates = MapQuestFacade.new(@end_city).get_coordinates
+      lat = coordinates.lat
+      lng = coordinates.lng
 
-    forecast = ForecastFacade.new(lat, lng).forecast
+      forecast = ForecastFacade.new(lat, lng).forecast
 
-    {
-      datetime: (Time.now + @seconds).strftime("%Y-%m-%d %H:%M"),
-      temperature: find_temperature(forecast.hourly_weather),
-      condition: find_condition(forecast.hourly_weather)
-    }
+      {
+        datetime: (Time.now + @seconds).strftime("%Y-%m-%d %H:%M"),
+        temperature: find_temperature(forecast.hourly_weather),
+        condition: find_condition(forecast.hourly_weather)
+      }
+    else
+      nil
+    end
   end
 
   private
 
   def add_time_to_current_time
-    result = Time.now + @seconds
-    result.strftime("%H")
+    if @seconds
+      result = Time.now + @seconds
+      result.strftime("%H")
+    else
+      nil
+    end
   end
 
   def find_temperature(forecast)

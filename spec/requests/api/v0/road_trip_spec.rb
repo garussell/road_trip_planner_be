@@ -97,5 +97,19 @@ RSpec.describe "POST /api/v0/road_trip", :vcr do
       expect(response.status).to eq(401)
       expect(response.body).to eq("{\"errors\":[{\"detail\":\"Unauthorized\"}]}")
     end
+
+    it "returns a 404 status code with impossible route" do
+      road_trip_params = {
+        origin: "New York, NY",
+        destination: "London, UK",
+        api_key: @api_key
+      }
+
+      post "/api/v0/road_trip", params: road_trip_params
+
+      expect(response).to_not be_successful
+      expect(response.status).to eq(404)
+      expect(response.body).to eq("{\"errors\":[{\"detail\":\"Impossible Route\"}]}")
+    end
   end
 end

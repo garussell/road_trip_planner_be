@@ -1,0 +1,233 @@
+{
+  "http_interactions": [
+    {
+      "request": {
+        "method": "get",
+        "uri": "https://www.mapquestapi.com/directions/v2/route?from=New%20York,%20NY&key=MY_SECRET_TOKEN&to=London,%20UK",
+        "body": {
+          "encoding": "US-ASCII",
+          "string": ""
+        },
+        "headers": {
+          "User-Agent": [
+            "Faraday v2.7.11"
+          ],
+          "Accept-Encoding": [
+            "gzip;q=1.0,deflate;q=0.6,identity;q=0.3"
+          ],
+          "Accept": [
+            "*/*"
+          ]
+        }
+      },
+      "response": {
+        "status": {
+          "code": 200,
+          "message": "OK"
+        },
+        "headers": {
+          "Date": [
+            "Sun, 24 Sep 2023 16:56:49 GMT"
+          ],
+          "Content-Type": [
+            "application/json; charset=utf-8"
+          ],
+          "Content-Length": [
+            "278"
+          ],
+          "Connection": [
+            "keep-alive"
+          ],
+          "X-Ratelimit-Limit-2628000": [
+            "15000"
+          ],
+          "X-Ratelimit-Remaining-2628000": [
+            "14613"
+          ],
+          "Ratelimit-Limit": [
+            "15000"
+          ],
+          "Ratelimit-Remaining": [
+            "14613"
+          ],
+          "Ratelimit-Reset": [
+            "2113391"
+          ],
+          "X-Powered-By": [
+            "MapQuest"
+          ],
+          "X-Request-Id": [
+            "5a8e4b30-5afb-11ee-9d04-93b2fa5a3e94"
+          ],
+          "Access-Control-Allow-Origin": [
+            "*"
+          ],
+          "X-Transaction-Count": [
+            "all=3,geocoding=2,directions=1"
+          ],
+          "Etag": [
+            "W/\"116-iBjgnQxNGqjY6sVCYaem2XJ/c3Q\""
+          ]
+        },
+        "body": {
+          "encoding": "ASCII-8BIT",
+          "string": "{\"route\":{\"routeError\":{\"errorCode\":2,\"message\":\"\"}},\"info\":{\"statuscode\":402,\"copyright\":{\"text\":\"© 2023 MapQuest, Inc.\",\"imageUrl\":\"http://api.mqcdn.com/res/mqlogo.gif\",\"imageAltText\":\"© 2023 MapQuest, Inc.\"},\"messages\":[\"We are unable to route with the given locations.\"]}}"
+        }
+      },
+      "recorded_at": "Sun, 24 Sep 2023 16:56:49 GMT"
+    },
+    {
+      "request": {
+        "method": "get",
+        "uri": "https://www.mapquestapi.com/directions/v2/route?from=New%20York,%20NY&key=MY_SECRET_TOKEN&to=London,%20UK",
+        "body": {
+          "encoding": "US-ASCII",
+          "string": ""
+        },
+        "headers": {
+          "User-Agent": [
+            "Faraday v2.7.11"
+          ],
+          "Accept-Encoding": [
+            "gzip;q=1.0,deflate;q=0.6,identity;q=0.3"
+          ],
+          "Accept": [
+            "*/*"
+          ]
+        }
+      },
+      "response": {
+        "status": {
+          "code": 200,
+          "message": "OK"
+        },
+        "headers": {
+          "Date": [
+            "Sun, 24 Sep 2023 16:56:50 GMT"
+          ],
+          "Content-Type": [
+            "application/json; charset=utf-8"
+          ],
+          "Content-Length": [
+            "278"
+          ],
+          "Connection": [
+            "keep-alive"
+          ],
+          "X-Ratelimit-Limit-2628000": [
+            "15000"
+          ],
+          "X-Ratelimit-Remaining-2628000": [
+            "14610"
+          ],
+          "Ratelimit-Limit": [
+            "15000"
+          ],
+          "Ratelimit-Remaining": [
+            "14610"
+          ],
+          "Ratelimit-Reset": [
+            "2113390"
+          ],
+          "X-Powered-By": [
+            "MapQuest"
+          ],
+          "X-Request-Id": [
+            "5ac47660-5afb-11ee-86ef-5b8c0e4d9ff4"
+          ],
+          "Access-Control-Allow-Origin": [
+            "*"
+          ],
+          "X-Transaction-Count": [
+            "all=3,geocoding=2,directions=1"
+          ],
+          "Etag": [
+            "W/\"116-iBjgnQxNGqjY6sVCYaem2XJ/c3Q\""
+          ]
+        },
+        "body": {
+          "encoding": "ASCII-8BIT",
+          "string": "{\"route\":{\"routeError\":{\"errorCode\":2,\"message\":\"\"}},\"info\":{\"statuscode\":402,\"copyright\":{\"text\":\"© 2023 MapQuest, Inc.\",\"imageUrl\":\"http://api.mqcdn.com/res/mqlogo.gif\",\"imageAltText\":\"© 2023 MapQuest, Inc.\"},\"messages\":[\"We are unable to route with the given locations.\"]}}"
+        }
+      },
+      "recorded_at": "Sun, 24 Sep 2023 16:56:50 GMT"
+    },
+    {
+      "request": {
+        "method": "get",
+        "uri": "https://www.mapquestapi.com/directions/v2/route?from=New%20York,%20NY&key=MY_SECRET_TOKEN&to=London,%20UK",
+        "body": {
+          "encoding": "US-ASCII",
+          "string": ""
+        },
+        "headers": {
+          "User-Agent": [
+            "Faraday v2.7.11"
+          ],
+          "Accept-Encoding": [
+            "gzip;q=1.0,deflate;q=0.6,identity;q=0.3"
+          ],
+          "Accept": [
+            "*/*"
+          ]
+        }
+      },
+      "response": {
+        "status": {
+          "code": 200,
+          "message": "OK"
+        },
+        "headers": {
+          "Date": [
+            "Sun, 24 Sep 2023 16:56:50 GMT"
+          ],
+          "Content-Type": [
+            "application/json; charset=utf-8"
+          ],
+          "Content-Length": [
+            "278"
+          ],
+          "Connection": [
+            "keep-alive"
+          ],
+          "X-Ratelimit-Limit-2628000": [
+            "15000"
+          ],
+          "X-Ratelimit-Remaining-2628000": [
+            "14607"
+          ],
+          "Ratelimit-Limit": [
+            "15000"
+          ],
+          "Ratelimit-Remaining": [
+            "14607"
+          ],
+          "Ratelimit-Reset": [
+            "2113390"
+          ],
+          "X-Powered-By": [
+            "MapQuest"
+          ],
+          "X-Request-Id": [
+            "5afa0550-5afb-11ee-889f-db48767c5ed5"
+          ],
+          "Access-Control-Allow-Origin": [
+            "*"
+          ],
+          "X-Transaction-Count": [
+            "all=3,geocoding=2,directions=1"
+          ],
+          "Etag": [
+            "W/\"116-iBjgnQxNGqjY6sVCYaem2XJ/c3Q\""
+          ]
+        },
+        "body": {
+          "encoding": "ASCII-8BIT",
+          "string": "{\"route\":{\"routeError\":{\"errorCode\":2,\"message\":\"\"}},\"info\":{\"statuscode\":402,\"copyright\":{\"text\":\"© 2023 MapQuest, Inc.\",\"imageUrl\":\"http://api.mqcdn.com/res/mqlogo.gif\",\"imageAltText\":\"© 2023 MapQuest, Inc.\"},\"messages\":[\"We are unable to route with the given locations.\"]}}"
+        }
+      },
+      "recorded_at": "Sun, 24 Sep 2023 16:56:50 GMT"
+    }
+  ],
+  "recorded_with": "VCR 6.2.0"
+}
