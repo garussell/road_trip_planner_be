@@ -16,10 +16,11 @@
 - Practice permission using `bcrypt` with password_digest.
 - Utilize ErrorSerializer and JSONAPI formatting.
 - Impliment `caching` to speed up process when search query includes location / city & state or latitude & longitude.
+- Practice robust testing for poros, services, facades, and requests.
 
 
 ## Project Description
-**Whether, Sweater** is a back-end project that exposes two API endpoints to make data available from [MapQuest API](https://developer.mapquest.com/documentation/geocoding-api/) and [Weather API](https://www.weatherapi.com/).  It allows the front-end to obtain JSON data that contains whether information for a city, where the city and state are passed in the URL boday as a location param.  
+**Whether, Sweater** is a back-end project that exposes two API endpoints to make data available from [MapQuest API](https://developer.mapquest.com/documentation/geocoding-api/) and [Weather API](https://www.weatherapi.com/).  It allows the front-end to obtain JSON data that contains whether information for a city, where the city and state are passed in the URL boday as a location param.  This API also utilizes [OpenLibrary API](https://openlibrary.org/developers) to search for books about the destination location.
 
 ## Setup
 - Ruby 3.2.2
@@ -42,6 +43,7 @@
 - User Registration: `POST /api/v0/users` - raw data needs to be sent in the body of the request
 - Login: `POST /api/v0/sessions` - raw data needs to be sent in the body of the request
 - Create Roadtrip: `POST /api/v0/road_trip` - raw data needs to be sent in the body of the request
+- Search Books: `GET /api/v0/book_search?location=#{location}&quantity=#{quantity}` - data can be sent as params (location); quantity optional
 
 ## Suggestions for Use
 
