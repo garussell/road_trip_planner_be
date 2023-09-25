@@ -1,15 +1,9 @@
 class Api::V0::BookSearchController < ApplicationController
+  before_action :validate_location, only: [:index]
+
   def index
-    if real_location?
-      begin
-        book_search = BookSearchFacade.new(book_search_params).get_books
-        render json: BookSearchSerializer.new(book_search)
-      rescue
-        render json: ErrorSerializer.format_errors("Invalid Parameters"), status: 422
-      end
-    else
-      render json: ErrorSerializer.format_errors("Invalid Parameters"), status: 422
-    end
+    book_search = BookSearchFacade.new(book_search_params).get_books
+    render json: BookSearchSerializer.new(book_search)
   end
 
   private 
@@ -18,9 +12,15 @@ class Api::V0::BookSearchController < ApplicationController
     params.permit(:location, :quantity)
   end
 
-  def real_location?
-    location = MapQuestFacade.new(params[:location])
-    result = location.get_travel_time(params[:location])
-    result.formatted_time != nil
+  def validate_location
+    unless real_location?(params[:location])
+      render json: ErrorSerializer.format_errors("Location parameter is required"), status: 422
+    end
+  end
+
+  def real_location?(location)
+    check_location = MapQuestFacade.new(location)
+    result = check_location.get_travel_time(location)
+    result.formatted_time.present?
   end
 end
