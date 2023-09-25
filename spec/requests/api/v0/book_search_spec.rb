@@ -86,7 +86,7 @@ RSpec.describe "GET /api/v0/book_search", :vcr do
       expect(response).to be_successful
       expect(response.status).to eq(200)
  
-      # Invalid location
+      # Location cannot be blank
       location_b = nil
       quantity_b = 5
 
@@ -96,6 +96,19 @@ RSpec.describe "GET /api/v0/book_search", :vcr do
       expect(response).to_not be_successful
       expect(response.status).to eq(422)
       expect(response_data[:errors]).to eq([{:detail=>"Invalid Parameters"}])
+    end
+
+    # Location not valid
+    it "has to be a real location" do
+      location = "asdfasdf"
+      quantity = 5
+
+      get "/api/v0/book_search?location=#{location}&quantity=#{quantity}"
+      response_data = JSON.parse(response.body, symbolize_names: true)
+
+      expect(response).to_not be_successful
+      expect(response.status).to eq(422)
+
     end
   end
 end

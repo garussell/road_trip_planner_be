@@ -236,6 +236,155 @@
         }
       },
       "recorded_at": "Mon, 25 Sep 2023 15:41:38 GMT"
+    },
+    {
+      "request": {
+        "method": "get",
+        "uri": "https://www.mapquestapi.com/geocoding/v1/address?key=MY_SECRET_TOKEN&location=denver,co",
+        "body": {
+          "encoding": "US-ASCII",
+          "string": ""
+        },
+        "headers": {
+          "User-Agent": [
+            "Faraday v2.7.11"
+          ],
+          "Accept-Encoding": [
+            "gzip;q=1.0,deflate;q=0.6,identity;q=0.3"
+          ],
+          "Accept": [
+            "*/*"
+          ]
+        }
+      },
+      "response": {
+        "status": {
+          "code": 200,
+          "message": "OK"
+        },
+        "headers": {
+          "Date": [
+            "Mon, 25 Sep 2023 16:37:38 GMT"
+          ],
+          "Content-Type": [
+            "application/json; charset=utf-8"
+          ],
+          "Content-Length": [
+            "797"
+          ],
+          "Connection": [
+            "keep-alive"
+          ],
+          "X-Ratelimit-Limit-2628000": [
+            "15000"
+          ],
+          "X-Ratelimit-Remaining-2628000": [
+            "14588"
+          ],
+          "Ratelimit-Limit": [
+            "15000"
+          ],
+          "Ratelimit-Remaining": [
+            "14588"
+          ],
+          "Ratelimit-Reset": [
+            "2028142"
+          ],
+          "X-Powered-By": [
+            "MapQuest"
+          ],
+          "X-Request-Id": [
+            "d6d23460-5bc1-11ee-a6bf-19b3c358d110"
+          ],
+          "Access-Control-Allow-Origin": [
+            "*"
+          ],
+          "Etag": [
+            "W/\"31d-e6U4VUsIusqpoCnMOLAMG4TFeGE\""
+          ]
+        },
+        "body": {
+          "encoding": "ASCII-8BIT",
+          "string": "{\"info\":{\"statuscode\":0,\"copyright\":{\"text\":\"© 2023 MapQuest, Inc.\",\"imageUrl\":\"http://api.mqcdn.com/res/mqlogo.gif\",\"imageAltText\":\"© 2023 MapQuest, Inc.\"},\"messages\":[]},\"options\":{\"maxResults\":-1,\"ignoreLatLngInput\":false},\"results\":[{\"providedLocation\":{\"location\":\"denver,co\"},\"locations\":[{\"street\":\"\",\"adminArea6\":\"\",\"adminArea6Type\":\"Neighborhood\",\"adminArea5\":\"Denver\",\"adminArea5Type\":\"City\",\"adminArea4\":\"Denver\",\"adminArea4Type\":\"County\",\"adminArea3\":\"CO\",\"adminArea3Type\":\"State\",\"adminArea1\":\"US\",\"adminArea1Type\":\"Country\",\"postalCode\":\"\",\"geocodeQualityCode\":\"A5XAX\",\"geocodeQuality\":\"CITY\",\"dragPoint\":false,\"sideOfStreet\":\"N\",\"linkId\":\"0\",\"unknownInput\":\"\",\"type\":\"s\",\"latLng\":{\"lat\":39.74001,\"lng\":-104.99202},\"displayLatLng\":{\"lat\":39.74001,\"lng\":-104.99202},\"mapUrl\":\"\"}]}]}"
+        }
+      },
+      "recorded_at": "Mon, 25 Sep 2023 16:37:38 GMT"
+    },
+    {
+      "request": {
+        "method": "get",
+        "uri": "https://www.mapquestapi.com/directions/v2/route?from=denver,co&key=MY_SECRET_TOKEN&to=denver,co",
+        "body": {
+          "encoding": "US-ASCII",
+          "string": ""
+        },
+        "headers": {
+          "User-Agent": [
+            "Faraday v2.7.11"
+          ],
+          "Accept-Encoding": [
+            "gzip;q=1.0,deflate;q=0.6,identity;q=0.3"
+          ],
+          "Accept": [
+            "*/*"
+          ]
+        }
+      },
+      "response": {
+        "status": {
+          "code": 200,
+          "message": "OK"
+        },
+        "headers": {
+          "Date": [
+            "Mon, 25 Sep 2023 16:46:53 GMT"
+          ],
+          "Content-Type": [
+            "application/json; charset=utf-8"
+          ],
+          "Content-Length": [
+            "3409"
+          ],
+          "Connection": [
+            "keep-alive"
+          ],
+          "X-Ratelimit-Limit-2628000": [
+            "15000"
+          ],
+          "X-Ratelimit-Remaining-2628000": [
+            "14578"
+          ],
+          "Ratelimit-Limit": [
+            "15000"
+          ],
+          "Ratelimit-Remaining": [
+            "14578"
+          ],
+          "Ratelimit-Reset": [
+            "2027587"
+          ],
+          "X-Powered-By": [
+            "MapQuest"
+          ],
+          "X-Request-Id": [
+            "21b73830-5bc3-11ee-889f-db48767c5ed5"
+          ],
+          "Access-Control-Allow-Origin": [
+            "*"
+          ],
+          "X-Transaction-Count": [
+            "all=3,geocoding=2,directions=1"
+          ],
+          "Etag": [
+            "W/\"d51-qjrdE6Hnd6ge/7FCY/SxI5gJhZY\""
+          ]
+        },
+        "body": {
+          "encoding": "ASCII-8BIT",
+          "string": "{\"route\":{\"sessionId\":\"AFMA5wcAAAUBAAAHAAAABQAAAIQAAAB42mNoYWBgZGJgYGDPSC1KtUrOFeU0lmZgYGBQMNm-g8PqZJjppiKnGBC9ucgphgELIFsjMgAAPVIXorZWAYU:car\",\"realTime\":0,\"distance\":0,\"time\":0,\"formattedTime\":\"00:00:00\",\"hasHighway\":false,\"hasTollRoad\":false,\"hasBridge\":false,\"hasSeasonalClosure\":false,\"hasTunnel\":false,\"hasFerry\":false,\"hasUnpaved\":false,\"hasTimedRestriction\":false,\"hasCountryCross\":false,\"legs\":[{\"index\":0,\"hasTollRoad\":false,\"hasHighway\":false,\"hasBridge\":false,\"hasUnpaved\":false,\"hasTunnel\":false,\"hasSeasonalClosure\":false,\"hasFerry\":false,\"hasCountryCross\":false,\"hasTimedRestriction\":false,\"distance\":0,\"time\":0,\"formattedTime\":\"00:00:00\",\"origIndex\":0,\"origNarrative\":\"\",\"destIndex\":0,\"destNarrative\":\"\",\"maneuvers\":[{\"index\":0,\"distance\":0,\"narrative\":\"Head north on W Colfax Ave (I-70-BL E).\",\"time\":0,\"direction\":1,\"directionName\":\"North\",\"signs\":[],\"maneuverNotes\":[],\"formattedTime\":\"00:00:00\",\"transportMode\":\"car\",\"startPoint\":{\"lat\":39.74001,\"lng\":-104.99202},\"turnType\":0,\"attributes\":0,\"iconUrl\":\"\",\"streets\":[\"I-70-BL\",\"US-40\",\"US-287\",\"W Colfax Ave\"],\"mapUrl\":\"https://www.mapquestapi.com/staticmap/v5/map?key=MY_SECRET_TOKEN&size=225,160&locations=39.74001,-104.99202|marker-1||39.74001,-104.99202|marker-2||&center=39.74001,-104.99202&defaultMarker=none&zoom=16&session=AFMA5wcAAAUBAAAHAAAABQAAAIQAAAB42mNoYWBgZGJgYGDPSC1KtUrOFeU0lmZgYGBQMNm-g8PqZJjppiKnGBC9ucgphgELIFsjMgAAPVIXorZWAYU:car\"},{\"index\":1,\"distance\":0,\"narrative\":\"Arrive at W Colfax Ave (I-70-BL E).\",\"time\":0,\"direction\":0,\"directionName\":\"None\",\"signs\":[],\"maneuverNotes\":[],\"formattedTime\":\"00:00:00\",\"transportMode\":\"car\",\"startPoint\":{\"lat\":39.74001,\"lng\":-104.99202},\"turnType\":0,\"attributes\":0,\"iconUrl\":\"\",\"streets\":[]}]}],\"options\":{\"routeType\":\"FASTEST\",\"narrativeType\":\"text\",\"enhancedNarrative\":false,\"walkingSpeed\":-1,\"highwayEfficiency\":22,\"avoids\":false,\"generalize\":-1,\"shapeFormat\":\"raw\",\"unit\":\"M\",\"locale\":\"en_US\",\"useTraffic\":false,\"timeType\":0,\"dateType\":0,\"doReverseGeocode\":true,\"manMaps\":true,\"sideOfStreetDisplay\":true},\"boundingBox\":{\"ul\":{\"lat\":39.74001,\"lng\":-104.99202},\"lr\":{\"lat\":39.74001,\"lng\":-104.99202}},\"routeWarnings\":[],\"name\":\"I-70-BL\",\"maxRoutes\":\"\",\"locations\":[{\"street\":\"\",\"adminArea6\":\"\",\"adminArea6Type\":\"Neighborhood\",\"adminArea5\":\"Denver\",\"adminArea5Type\":\"City\",\"adminArea4\":\"Denver\",\"adminArea4Type\":\"County\",\"adminArea3\":\"CO\",\"adminArea3Type\":\"State\",\"adminArea1\":\"US\",\"adminArea1Type\":\"Country\",\"postalCode\":\"\",\"geocodeQualityCode\":\"A5XAX\",\"geocodeQuality\":\"CITY\",\"dragPoint\":false,\"sideOfStreet\":\"N\",\"linkId\":\"0\",\"unknownInput\":\"\",\"type\":\"s\",\"latLng\":{\"lat\":39.74001,\"lng\":-104.99202},\"displayLatLng\":{\"lat\":39.74001,\"lng\":-104.99202},\"mapUrl\":\"\"},{\"street\":\"\",\"adminArea6\":\"\",\"adminArea6Type\":\"Neighborhood\",\"adminArea5\":\"Denver\",\"adminArea5Type\":\"City\",\"adminArea4\":\"Denver\",\"adminArea4Type\":\"County\",\"adminArea3\":\"CO\",\"adminArea3Type\":\"State\",\"adminArea1\":\"US\",\"adminArea1Type\":\"Country\",\"postalCode\":\"\",\"geocodeQualityCode\":\"A5XAX\",\"geocodeQuality\":\"CITY\",\"dragPoint\":false,\"sideOfStreet\":\"N\",\"linkId\":\"0\",\"unknownInput\":\"\",\"type\":\"s\",\"latLng\":{\"lat\":39.74001,\"lng\":-104.99202},\"displayLatLng\":{\"lat\":39.74001,\"lng\":-104.99202},\"mapUrl\":\"\"}],\"locationSequence\":[0,1]},\"info\":{\"statuscode\":0,\"copyright\":{\"text\":\"© 2023 MapQuest, Inc.\",\"imageUrl\":\"http://api.mqcdn.com/res/mqlogo.gif\",\"imageAltText\":\"© 2023 MapQuest, Inc.\"},\"messages\":[]}}"
+        }
+      },
+      "recorded_at": "Mon, 25 Sep 2023 16:46:53 GMT"
     }
   ],
   "recorded_with": "VCR 6.2.0"
