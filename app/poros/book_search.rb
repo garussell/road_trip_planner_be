@@ -36,12 +36,12 @@ class BookSearch
       "with a hint of nothingness",
       "with a chance of meatballs",
       "with a chance of happiness",
-      "with a possibility of flying pigs",
-      "with a dash of dinner",
+      "with a possibility of things changing",
+      "with a dash of panic",
       "with a flurry of magic",
-      "with dreams",
+      "with dreams to make happen",
       "with a touch of destiny",
-      "with a mystical aura"
+      "with a mystical aura of wonder"
     ]
     summary.sample
   end
