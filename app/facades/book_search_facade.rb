@@ -6,6 +6,6 @@ class BookSearchFacade
 
   def get_books
     data = LibraryService.get_books(@location, @quantity)
-    BookSearch.new(data)
+    BookSearch.new(@location, data)
   end
 end

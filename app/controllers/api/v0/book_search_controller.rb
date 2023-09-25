@@ -2,7 +2,6 @@ class Api::V0::BookSearchController < ApplicationController
   def index
 
     begin
-      require 'pry';binding.pry
       book_search = BookSearchFacade.new(book_search_params).get_books
       render json: BookSearchSerializer.new(book_search)
     rescue
