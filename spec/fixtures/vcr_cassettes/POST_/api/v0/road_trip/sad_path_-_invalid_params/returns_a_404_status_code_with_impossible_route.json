@@ -27,7 +27,7 @@
         },
         "headers": {
           "Date": [
-            "Sun, 24 Sep 2023 16:56:49 GMT"
+            "Mon, 25 Sep 2023 19:48:49 GMT"
           ],
           "Content-Type": [
             "application/json; charset=utf-8"
@@ -42,22 +42,22 @@
             "15000"
           ],
           "X-Ratelimit-Remaining-2628000": [
-            "14613"
+            "14383"
           ],
           "Ratelimit-Limit": [
             "15000"
           ],
           "Ratelimit-Remaining": [
-            "14613"
+            "14383"
           ],
           "Ratelimit-Reset": [
-            "2113391"
+            "2016671"
           ],
           "X-Powered-By": [
             "MapQuest"
           ],
           "X-Request-Id": [
-            "5a8e4b30-5afb-11ee-9d04-93b2fa5a3e94"
+            "8be69020-5bdc-11ee-a8e5-5f2f1f539db4"
           ],
           "Access-Control-Allow-Origin": [
             "*"
@@ -74,7 +74,7 @@
           "string": "{\"route\":{\"routeError\":{\"errorCode\":2,\"message\":\"\"}},\"info\":{\"statuscode\":402,\"copyright\":{\"text\":\"© 2023 MapQuest, Inc.\",\"imageUrl\":\"http://api.mqcdn.com/res/mqlogo.gif\",\"imageAltText\":\"© 2023 MapQuest, Inc.\"},\"messages\":[\"We are unable to route with the given locations.\"]}}"
         }
       },
-      "recorded_at": "Sun, 24 Sep 2023 16:56:49 GMT"
+      "recorded_at": "Mon, 25 Sep 2023 19:48:49 GMT"
     },
     {
       "request": {
@@ -103,7 +103,7 @@
         },
         "headers": {
           "Date": [
-            "Sun, 24 Sep 2023 16:56:50 GMT"
+            "Mon, 25 Sep 2023 19:48:50 GMT"
           ],
           "Content-Type": [
             "application/json; charset=utf-8"
@@ -118,22 +118,22 @@
             "15000"
           ],
           "X-Ratelimit-Remaining-2628000": [
-            "14610"
+            "14378"
           ],
           "Ratelimit-Limit": [
             "15000"
           ],
           "Ratelimit-Remaining": [
-            "14610"
+            "14378"
           ],
           "Ratelimit-Reset": [
-            "2113390"
+            "2016670"
           ],
           "X-Powered-By": [
             "MapQuest"
           ],
           "X-Request-Id": [
-            "5ac47660-5afb-11ee-86ef-5b8c0e4d9ff4"
+            "8c4774d0-5bdc-11ee-be4e-af8e498a33bd"
           ],
           "Access-Control-Allow-Origin": [
             "*"
@@ -150,7 +150,7 @@
           "string": "{\"route\":{\"routeError\":{\"errorCode\":2,\"message\":\"\"}},\"info\":{\"statuscode\":402,\"copyright\":{\"text\":\"© 2023 MapQuest, Inc.\",\"imageUrl\":\"http://api.mqcdn.com/res/mqlogo.gif\",\"imageAltText\":\"© 2023 MapQuest, Inc.\"},\"messages\":[\"We are unable to route with the given locations.\"]}}"
         }
       },
-      "recorded_at": "Sun, 24 Sep 2023 16:56:50 GMT"
+      "recorded_at": "Mon, 25 Sep 2023 19:48:50 GMT"
     },
     {
       "request": {
@@ -179,7 +179,7 @@
         },
         "headers": {
           "Date": [
-            "Sun, 24 Sep 2023 16:56:50 GMT"
+            "Mon, 25 Sep 2023 19:48:51 GMT"
           ],
           "Content-Type": [
             "application/json; charset=utf-8"
@@ -194,22 +194,22 @@
             "15000"
           ],
           "X-Ratelimit-Remaining-2628000": [
-            "14607"
+            "14372"
           ],
           "Ratelimit-Limit": [
             "15000"
           ],
           "Ratelimit-Remaining": [
-            "14607"
+            "14372"
           ],
           "Ratelimit-Reset": [
-            "2113390"
+            "2016669"
           ],
           "X-Powered-By": [
             "MapQuest"
           ],
           "X-Request-Id": [
-            "5afa0550-5afb-11ee-889f-db48767c5ed5"
+            "8cf715c0-5bdc-11ee-a8e5-5f2f1f539db4"
           ],
           "Access-Control-Allow-Origin": [
             "*"
@@ -226,7 +226,7 @@
           "string": "{\"route\":{\"routeError\":{\"errorCode\":2,\"message\":\"\"}},\"info\":{\"statuscode\":402,\"copyright\":{\"text\":\"© 2023 MapQuest, Inc.\",\"imageUrl\":\"http://api.mqcdn.com/res/mqlogo.gif\",\"imageAltText\":\"© 2023 MapQuest, Inc.\"},\"messages\":[\"We are unable to route with the given locations.\"]}}"
         }
       },
-      "recorded_at": "Sun, 24 Sep 2023 16:56:50 GMT"
+      "recorded_at": "Mon, 25 Sep 2023 19:48:51 GMT"
     }
   ],
   "recorded_with": "VCR 6.2.0"
