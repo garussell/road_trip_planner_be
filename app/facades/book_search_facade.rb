@@ -3,4 +3,9 @@ class BookSearchFacade
     @location = params[:location]
     @quantity = params[:quantity]
   end
+
+  def get_books
+    data = LibraryService.get_books(@location, @quantity)
+    BookSearch.new(data)
+  end
 end
