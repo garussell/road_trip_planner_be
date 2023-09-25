@@ -1,0 +1,232 @@
+{
+  "http_interactions": [
+    {
+      "request": {
+        "method": "get",
+        "uri": "https://api.unsplash.com/search/photos?client_id&per_page=1&query=denver,co",
+        "body": {
+          "encoding": "US-ASCII",
+          "string": ""
+        },
+        "headers": {
+          "User-Agent": [
+            "Faraday v2.7.11"
+          ],
+          "Accept-Encoding": [
+            "gzip;q=1.0,deflate;q=0.6,identity;q=0.3"
+          ],
+          "Accept": [
+            "*/*"
+          ]
+        }
+      },
+      "response": {
+        "status": {
+          "code": 401,
+          "message": "Unauthorized"
+        },
+        "headers": {
+          "Connection": [
+            "keep-alive"
+          ],
+          "Server": [
+            "Cowboy"
+          ],
+          "Content-Type": [
+            "application/json"
+          ],
+          "Access-Control-Allow-Origin": [
+            "*"
+          ],
+          "Access-Control-Request-Method": [
+            "*"
+          ],
+          "Access-Control-Allow-Headers": [
+            "*"
+          ],
+          "Access-Control-Expose-Headers": [
+            "Link,X-Total,X-Per-Page,X-RateLimit-Limit,X-RateLimit-Remaining"
+          ],
+          "X-Powered-By": [
+            "hero-app"
+          ],
+          "Content-Language": [
+            "en"
+          ],
+          "Cache-Control": [
+            "no-cache"
+          ],
+          "X-Request-Id": [
+            "444c1362-197c-481a-b56a-2f62c6c26026"
+          ],
+          "X-Runtime": [
+            "0.013329"
+          ],
+          "Strict-Transport-Security": [
+            "max-age=63072000; includeSubDomains"
+          ],
+          "Via": [
+            "1.1 vegur, 1.1 varnish, 1.1 varnish"
+          ],
+          "Accept-Ranges": [
+            "bytes"
+          ],
+          "Date": [
+            "Mon, 25 Sep 2023 20:57:04 GMT"
+          ],
+          "X-Served-By": [
+            "cache-iad-kiad7000113-IAD, cache-den8225-DEN"
+          ],
+          "X-Cache": [
+            "MISS, MISS"
+          ],
+          "X-Cache-Hits": [
+            "0, 0"
+          ],
+          "X-Timer": [
+            "S1695675425.878738,VS0,VE61"
+          ],
+          "Vary": [
+            "Accept-Encoding,Authorization,Accept-Language,client-geo-region,Accept"
+          ],
+          "Transfer-Encoding": [
+            "chunked"
+          ]
+        },
+        "body": {
+          "encoding": "ASCII-8BIT",
+          "string": "{\"errors\":[\"OAuth error: The access token is invalid\"]}"
+        }
+      },
+      "recorded_at": "Mon, 25 Sep 2023 20:57:04 GMT"
+    },
+    {
+      "request": {
+        "method": "get",
+        "uri": "https://api.unsplash.com/search/photos?client_id=Tap7C4jxeX1AUgv6CUQs6oSpCsLjvM33K3YX0bSsLhM&per_page=1&query=denver,co",
+        "body": {
+          "encoding": "US-ASCII",
+          "string": ""
+        },
+        "headers": {
+          "User-Agent": [
+            "Faraday v2.7.11"
+          ],
+          "Accept-Encoding": [
+            "gzip;q=1.0,deflate;q=0.6,identity;q=0.3"
+          ],
+          "Accept": [
+            "*/*"
+          ]
+        }
+      },
+      "response": {
+        "status": {
+          "code": 200,
+          "message": "OK"
+        },
+        "headers": {
+          "Connection": [
+            "keep-alive"
+          ],
+          "Content-Length": [
+            "3889"
+          ],
+          "Server": [
+            "Cowboy"
+          ],
+          "Content-Type": [
+            "application/json"
+          ],
+          "Access-Control-Allow-Origin": [
+            "*"
+          ],
+          "Access-Control-Request-Method": [
+            "*"
+          ],
+          "Access-Control-Allow-Headers": [
+            "*"
+          ],
+          "Access-Control-Expose-Headers": [
+            "Link,X-Total,X-Per-Page,X-RateLimit-Limit,X-RateLimit-Remaining"
+          ],
+          "Cache-Control": [
+            "max-age=86400,stale-if-error=3600,stale-while-revalidate=60"
+          ],
+          "X-Unsplash-Version": [
+            "v1"
+          ],
+          "Warning": [
+            "The tags property in this endpoint is deprecated. https://changelog.unsplash.com/deprecations/2021/07/12/tags-search-deprecation.html"
+          ],
+          "Link": [
+            "<https://api.unsplash.com/search/photos?client_id=Tap7C4jxeX1AUgv6CUQs6oSpCsLjvM33K3YX0bSsLhM&page=7421&per_page=1&query=denver%2Cco>; rel=\"last\", <https://api.unsplash.com/search/photos?client_id=Tap7C4jxeX1AUgv6CUQs6oSpCsLjvM33K3YX0bSsLhM&page=2&per_page=1&query=denver%2Cco>; rel=\"next\""
+          ],
+          "X-Total": [
+            "7421"
+          ],
+          "X-Per-Page": [
+            "1"
+          ],
+          "X-Powered-By": [
+            "hero-app"
+          ],
+          "Content-Language": [
+            "en"
+          ],
+          "Etag": [
+            "W/\"a9f7612200833e73c0b8b786ad36c906\""
+          ],
+          "X-Ratelimit-Limit": [
+            "50"
+          ],
+          "X-Ratelimit-Remaining": [
+            "49"
+          ],
+          "X-Request-Id": [
+            "e04d860c-08e9-40d6-8049-a4a938973294"
+          ],
+          "X-Runtime": [
+            "0.049279"
+          ],
+          "Strict-Transport-Security": [
+            "max-age=63072000; includeSubDomains"
+          ],
+          "Via": [
+            "1.1 vegur, 1.1 varnish, 1.1 varnish"
+          ],
+          "Accept-Ranges": [
+            "bytes"
+          ],
+          "Date": [
+            "Mon, 25 Sep 2023 21:00:24 GMT"
+          ],
+          "Age": [
+            "0"
+          ],
+          "X-Served-By": [
+            "cache-iad-kjyo7100178-IAD, cache-den8229-DEN"
+          ],
+          "X-Cache": [
+            "MISS, MISS"
+          ],
+          "X-Cache-Hits": [
+            "0, 0"
+          ],
+          "X-Timer": [
+            "S1695675624.052761,VS0,VE109"
+          ],
+          "Vary": [
+            "Accept-Encoding,Authorization,Accept-Language,client-geo-region,Accept"
+          ]
+        },
+        "body": {
+          "encoding": "ASCII-8BIT",
+          "string": "{\"total\":7421,\"total_pages\":7421,\"results\":[{\"id\":\"LKa4D7eysCU\",\"slug\":\"LKa4D7eysCU\",\"created_at\":\"2021-07-01T16:37:41Z\",\"updated_at\":\"2023-09-25T01:21:03Z\",\"promoted_at\":null,\"width\":5472,\"height\":3008,\"color\":\"#a6a6a6\",\"blur_hash\":\"LIEo#--;M{xt00D%xuof%2kCV?t7\",\"description\":\"G PRO - 3 Wheel Electric Scooter from GOTRAX\",\"alt_description\":\"man in blue long sleeve shirt and brown pants wearing black shoes running on street during\",\"breadcrumbs\":[],\"urls\":{\"raw\":\"https://images.unsplash.com/photo-1625156841498-ab9b4a0ca424?ixid=M3w1MDc0NDh8MHwxfHNlYXJjaHwxfHxkZW52ZXIlMkNjb3xlbnwwfHx8fDE2OTU2NzU2MjR8MA\\u0026ixlib=rb-4.0.3\",\"full\":\"https://images.unsplash.com/photo-1625156841498-ab9b4a0ca424?crop=entropy\\u0026cs=srgb\\u0026fm=jpg\\u0026ixid=M3w1MDc0NDh8MHwxfHNlYXJjaHwxfHxkZW52ZXIlMkNjb3xlbnwwfHx8fDE2OTU2NzU2MjR8MA\\u0026ixlib=rb-4.0.3\\u0026q=85\",\"regular\":\"https://images.unsplash.com/photo-1625156841498-ab9b4a0ca424?crop=entropy\\u0026cs=tinysrgb\\u0026fit=max\\u0026fm=jpg\\u0026ixid=M3w1MDc0NDh8MHwxfHNlYXJjaHwxfHxkZW52ZXIlMkNjb3xlbnwwfHx8fDE2OTU2NzU2MjR8MA\\u0026ixlib=rb-4.0.3\\u0026q=80\\u0026w=1080\",\"small\":\"https://images.unsplash.com/photo-1625156841498-ab9b4a0ca424?crop=entropy\\u0026cs=tinysrgb\\u0026fit=max\\u0026fm=jpg\\u0026ixid=M3w1MDc0NDh8MHwxfHNlYXJjaHwxfHxkZW52ZXIlMkNjb3xlbnwwfHx8fDE2OTU2NzU2MjR8MA\\u0026ixlib=rb-4.0.3\\u0026q=80\\u0026w=400\",\"thumb\":\"https://images.unsplash.com/photo-1625156841498-ab9b4a0ca424?crop=entropy\\u0026cs=tinysrgb\\u0026fit=max\\u0026fm=jpg\\u0026ixid=M3w1MDc0NDh8MHwxfHNlYXJjaHwxfHxkZW52ZXIlMkNjb3xlbnwwfHx8fDE2OTU2NzU2MjR8MA\\u0026ixlib=rb-4.0.3\\u0026q=80\\u0026w=200\",\"small_s3\":\"https://s3.us-west-2.amazonaws.com/images.unsplash.com/small/photo-1625156841498-ab9b4a0ca424\"},\"links\":{\"self\":\"https://api.unsplash.com/photos/LKa4D7eysCU\",\"html\":\"https://unsplash.com/photos/LKa4D7eysCU\",\"download\":\"https://unsplash.com/photos/LKa4D7eysCU/download?ixid=M3w1MDc0NDh8MHwxfHNlYXJjaHwxfHxkZW52ZXIlMkNjb3xlbnwwfHx8fDE2OTU2NzU2MjR8MA\",\"download_location\":\"https://api.unsplash.com/photos/LKa4D7eysCU/download?ixid=M3w1MDc0NDh8MHwxfHNlYXJjaHwxfHxkZW52ZXIlMkNjb3xlbnwwfHx8fDE2OTU2NzU2MjR8MA\"},\"likes\":1,\"liked_by_user\":false,\"current_user_collections\":[],\"sponsorship\":null,\"topic_submissions\":{},\"user\":{\"id\":\"Mn9Hw2whvOg\",\"updated_at\":\"2022-11-21T00:08:30Z\",\"username\":\"gotraxofficial\",\"name\":\"Gotrax\",\"first_name\":\"Gotrax\",\"last_name\":null,\"twitter_username\":null,\"portfolio_url\":\"http://www.gotrax.com\",\"bio\":\"We’re on a mission to create electric rideables that are bold, beautiful, and expand the possibilities for personal transportation.\",\"location\":null,\"links\":{\"self\":\"https://api.unsplash.com/users/gotraxofficial\",\"html\":\"https://unsplash.com/@gotraxofficial\",\"photos\":\"https://api.unsplash.com/users/gotraxofficial/photos\",\"likes\":\"https://api.unsplash.com/users/gotraxofficial/likes\",\"portfolio\":\"https://api.unsplash.com/users/gotraxofficial/portfolio\",\"following\":\"https://api.unsplash.com/users/gotraxofficial/following\",\"followers\":\"https://api.unsplash.com/users/gotraxofficial/followers\"},\"profile_image\":{\"small\":\"https://images.unsplash.com/profile-1625156495597-2aa5bc5516e6image?ixlib=rb-4.0.3\\u0026crop=faces\\u0026fit=crop\\u0026w=32\\u0026h=32\",\"medium\":\"https://images.unsplash.com/profile-1625156495597-2aa5bc5516e6image?ixlib=rb-4.0.3\\u0026crop=faces\\u0026fit=crop\\u0026w=64\\u0026h=64\",\"large\":\"https://images.unsplash.com/profile-1625156495597-2aa5bc5516e6image?ixlib=rb-4.0.3\\u0026crop=faces\\u0026fit=crop\\u0026w=128\\u0026h=128\"},\"instagram_username\":\"ridegotrax.com\",\"total_collections\":0,\"total_likes\":0,\"total_photos\":1,\"accepted_tos\":true,\"for_hire\":false,\"social\":{\"instagram_username\":\"ridegotrax.com\",\"portfolio_url\":\"http://www.gotrax.com\",\"twitter_username\":null,\"paypal_email\":null}},\"tags\":[{\"type\":\"search\",\"title\":\"electricscooter\"},{\"type\":\"search\",\"title\":\"gotrax\"},{\"type\":\"search\",\"title\":\"commuter\"}]}]}"
+        }
+      },
+      "recorded_at": "Mon, 25 Sep 2023 21:00:24 GMT"
+    }
+  ],
+  "recorded_with": "VCR 6.2.0"
+}

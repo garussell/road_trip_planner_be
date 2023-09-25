@@ -15,6 +15,7 @@ class Api::V0::RoadTripController < ApplicationController
       else
         render json: ErrorSerializer.format_errors("Invalid Parameters"), status: 422
       end
+      
     else
       render json: ErrorSerializer.format_errors("Unauthorized"), status: 401
     end
