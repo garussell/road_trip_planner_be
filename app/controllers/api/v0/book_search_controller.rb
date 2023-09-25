@@ -14,7 +14,7 @@ class Api::V0::BookSearchController < ApplicationController
 
   def validate_location
     unless real_location?(params[:location])
-      render json: ErrorSerializer.format_errors("Location parameter is required"), status: 422
+      render json: ErrorSerializer.format_errors("Invalid Location Parameter"), status: 422
     end
   end
 

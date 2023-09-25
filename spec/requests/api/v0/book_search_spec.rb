@@ -95,10 +95,9 @@ RSpec.describe "GET /api/v0/book_search", :vcr do
 
       expect(response).to_not be_successful
       expect(response.status).to eq(422)
-      expect(response_data[:errors]).to eq([{:detail=>"Location parameter is required"}])
+      expect(response_data[:errors]).to eq([{:detail=>"Invalid Location Parameter"}])
     end
 
-    # Location not valid
     it "has to be a real location" do
       location = "asdfasdf"
       quantity = 5
@@ -108,7 +107,6 @@ RSpec.describe "GET /api/v0/book_search", :vcr do
 
       expect(response).to_not be_successful
       expect(response.status).to eq(422)
-
     end
   end
 end
