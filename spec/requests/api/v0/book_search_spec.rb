@@ -76,17 +76,16 @@ RSpec.describe "GET /api/v0/book_search", :vcr do
 
   context "sad path - invalid params" do
     it "returns a 422 status code" do
-      # Invalid quantity
+      # Quantity can be blank
       location = "denver,co"
       quantity = nil
 
       get "/api/v0/book_search?location=#{location}&quantity=#{quantity}"
       response_data = JSON.parse(response.body, symbolize_names: true)
 
-      expect(response).to_not be_successful
-      expect(response.status).to eq(422)
-      expect(response_data[:errors]).to eq([{:detail=>"Invalid Parameters"}])
-
+      expect(response).to be_successful
+      expect(response.status).to eq(200)
+ 
       # Invalid location
       location_b = nil
       quantity_b = 5
