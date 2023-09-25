@@ -3,103 +3,6 @@
     {
       "request": {
         "method": "get",
-        "uri": "http://api.weatherapi.com/v1/forecast.json?days=5&q=",
-        "body": {
-          "encoding": "US-ASCII",
-          "string": ""
-        },
-        "headers": {
-          "Key": [
-            "1ec2e16d58cb4037b8d225426232209"
-          ],
-          "User-Agent": [
-            "Faraday v2.7.11"
-          ],
-          "Accept-Encoding": [
-            "gzip;q=1.0,deflate;q=0.6,identity;q=0.3"
-          ],
-          "Accept": [
-            "*/*"
-          ]
-        }
-      },
-      "response": {
-        "status": {
-          "code": 400,
-          "message": "Bad Request"
-        },
-        "headers": {
-          "Date": [
-            "Sat, 23 Sep 2023 16:56:53 GMT"
-          ],
-          "Content-Type": [
-            "application/json"
-          ],
-          "Content-Length": [
-            "59"
-          ],
-          "Connection": [
-            "keep-alive"
-          ],
-          "Server": [
-            "BunnyCDN-IL1-871"
-          ],
-          "Cdn-Pullzone": [
-            "93447"
-          ],
-          "Cdn-Uid": [
-            "8fa3a04a-75d9-4707-8056-b7b33c8ac7fe"
-          ],
-          "Cdn-Requestcountrycode": [
-            "US"
-          ],
-          "Age": [
-            "0"
-          ],
-          "Cache-Control": [
-            "public, max-age=5"
-          ],
-          "Via": [
-            "1.1 varnish (Varnish/6.0)"
-          ],
-          "X-Varnish": [
-            "325092233"
-          ],
-          "Cdn-Proxyver": [
-            "1.04"
-          ],
-          "Cdn-Requestpullsuccess": [
-            "True"
-          ],
-          "Cdn-Requestpullcode": [
-            "400"
-          ],
-          "Cdn-Cachedat": [
-            "09/23/2023 16:56:53"
-          ],
-          "Cdn-Edgestorageid": [
-            "845"
-          ],
-          "Cdn-Status": [
-            "400"
-          ],
-          "Cdn-Requestid": [
-            "699513d74ccded376c3416a838930c84"
-          ],
-          "Cdn-Cache": [
-            "MISS"
-          ]
-        },
-        "body": {
-          "encoding": "UTF-8",
-          "string": "{\"error\":{\"code\":1003,\"message\":\"Parameter q is missing.\"}}"
-        }
-      },
-      "recorded_at": "Sat, 23 Sep 2023 16:56:53 GMT"
-    },
-    {
-      "request": {
-        "method": "get",
         "uri": "https://www.mapquestapi.com/geocoding/v1/address?key=MY_SECRET_TOKEN&location=",
         "body": {
           "encoding": "US-ASCII",
@@ -124,7 +27,7 @@
         },
         "headers": {
           "Date": [
-            "Sat, 23 Sep 2023 17:33:32 GMT"
+            "Mon, 25 Sep 2023 19:48:45 GMT"
           ],
           "Content-Type": [
             "application/json; charset=utf-8"
@@ -139,22 +42,22 @@
             "15000"
           ],
           "X-Ratelimit-Remaining-2628000": [
-            "14959"
+            "14393"
           ],
           "Ratelimit-Limit": [
             "15000"
           ],
           "Ratelimit-Remaining": [
-            "14959"
+            "14393"
           ],
           "Ratelimit-Reset": [
-            "2197588"
+            "2016675"
           ],
           "X-Powered-By": [
             "MapQuest"
           ],
           "X-Request-Id": [
-            "50f097f0-5a37-11ee-923f-0bc2ac19d7a0"
+            "89e05fe0-5bdc-11ee-923f-0bc2ac19d7a0"
           ],
           "Access-Control-Allow-Origin": [
             "*"
@@ -168,7 +71,7 @@
           "string": "{\"info\":{\"statuscode\":400,\"copyright\":{\"text\":\"© 2023 MapQuest, Inc.\",\"imageUrl\":\"http://api.mqcdn.com/res/mqlogo.gif\",\"imageAltText\":\"© 2023 MapQuest, Inc.\"},\"messages\":[\"Illegal argument from request: Insufficient info for location\"]},\"options\":{\"maxResults\":-1,\"ignoreLatLngInput\":false},\"results\":[{\"providedLocation\":{},\"locations\":[]}]}"
         }
       },
-      "recorded_at": "Sat, 23 Sep 2023 17:33:32 GMT"
+      "recorded_at": "Mon, 25 Sep 2023 19:48:45 GMT"
     }
   ],
   "recorded_with": "VCR 6.2.0"

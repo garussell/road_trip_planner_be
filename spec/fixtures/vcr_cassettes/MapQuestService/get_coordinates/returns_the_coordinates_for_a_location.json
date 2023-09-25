@@ -27,7 +27,7 @@
         },
         "headers": {
           "Date": [
-            "Sat, 23 Sep 2023 19:10:26 GMT"
+            "Mon, 25 Sep 2023 19:48:52 GMT"
           ],
           "Content-Type": [
             "application/json; charset=utf-8"
@@ -42,22 +42,22 @@
             "15000"
           ],
           "X-Ratelimit-Remaining-2628000": [
-            "14957"
+            "14372"
           ],
           "Ratelimit-Limit": [
             "15000"
           ],
           "Ratelimit-Remaining": [
-            "14957"
+            "14372"
           ],
           "Ratelimit-Reset": [
-            "2191774"
+            "2016668"
           ],
           "X-Powered-By": [
             "MapQuest"
           ],
           "X-Request-Id": [
-            "da4c8d30-5a44-11ee-88fb-5d30dc24e6e2"
+            "8d9b9320-5bdc-11ee-88fb-5d30dc24e6e2"
           ],
           "Access-Control-Allow-Origin": [
             "*"
@@ -71,7 +71,7 @@
           "string": "{\"info\":{\"statuscode\":0,\"copyright\":{\"text\":\"© 2023 MapQuest, Inc.\",\"imageUrl\":\"http://api.mqcdn.com/res/mqlogo.gif\",\"imageAltText\":\"© 2023 MapQuest, Inc.\"},\"messages\":[]},\"options\":{\"maxResults\":-1,\"ignoreLatLngInput\":false},\"results\":[{\"providedLocation\":{\"location\":\"denver,co\"},\"locations\":[{\"street\":\"\",\"adminArea6\":\"\",\"adminArea6Type\":\"Neighborhood\",\"adminArea5\":\"Denver\",\"adminArea5Type\":\"City\",\"adminArea4\":\"Denver\",\"adminArea4Type\":\"County\",\"adminArea3\":\"CO\",\"adminArea3Type\":\"State\",\"adminArea1\":\"US\",\"adminArea1Type\":\"Country\",\"postalCode\":\"\",\"geocodeQualityCode\":\"A5XAX\",\"geocodeQuality\":\"CITY\",\"dragPoint\":false,\"sideOfStreet\":\"N\",\"linkId\":\"0\",\"unknownInput\":\"\",\"type\":\"s\",\"latLng\":{\"lat\":39.74001,\"lng\":-104.99202},\"displayLatLng\":{\"lat\":39.74001,\"lng\":-104.99202},\"mapUrl\":\"\"}]}]}"
         }
       },
-      "recorded_at": "Sat, 23 Sep 2023 19:10:26 GMT"
+      "recorded_at": "Mon, 25 Sep 2023 19:48:52 GMT"
     }
   ],
   "recorded_with": "VCR 6.2.0"

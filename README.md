@@ -13,9 +13,9 @@
 
 ## Learning Goals
 - Practice geolocation services and integration of multiple APIs as a microservice.
-- Practice permission using `bcrypt` with password_digest
-- Utilize ErrorSerializer and JSONAPI formatting
-- 
+- Practice permission using `bcrypt` with password_digest.
+- Utilize ErrorSerializer and JSONAPI formatting.
+- Impliment `caching` to speed up process when search query includes location / city & state or latitude & longitude.
 
 
 ## Project Description
