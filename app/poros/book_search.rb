@@ -6,7 +6,6 @@ class BookSearch
     @destination = location
     @forecast = get_forecast
     @total_books_found = data[:numFound]
-    require 'pry';binding.pry
     @books = list_books(data)
   end
 

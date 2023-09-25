@@ -55,7 +55,7 @@ RSpec.describe "GET /api/v0/book_search", :vcr do
       expect(book_search[:attributes][:forecast][:summary]).to be_a(String)
 
       expect(book_search[:attributes][:forecast]).to have_key(:temperature)
-      expect(book_search[:attributes][:forecast][:temperature]).to be_a(Float)
+      expect(book_search[:attributes][:forecast][:temperature]).to be_a(String)
 
       expect(book_search[:attributes]).to have_key(:total_books_found)
       expect(book_search[:attributes][:total_books_found]).to be_a(Integer)
@@ -71,6 +71,32 @@ RSpec.describe "GET /api/v0/book_search", :vcr do
       
       expect(book_search[:attributes][:books].first).to have_key(:title)
       expect(book_search[:attributes][:books].first[:title]).to be_a(String)
+    end
+  end
+
+  context "sad path - invalid params" do
+    it "returns a 422 status code" do
+      # Invalid quantity
+      location = "denver,co"
+      quantity = nil
+
+      get "/api/v0/book_search?location=#{location}&quantity=#{quantity}"
+      response_data = JSON.parse(response.body, symbolize_names: true)
+
+      expect(response).to_not be_successful
+      expect(response.status).to eq(422)
+      expect(response_data[:errors]).to eq([{:detail=>"Invalid Parameters"}])
+
+      # Invalid location
+      location_b = nil
+      quantity_b = 5
+
+      get "/api/v0/book_search?location=#{location_b}&quantity=#{quantity_b}"
+      response_data = JSON.parse(response.body, symbolize_names: true)
+
+      expect(response).to_not be_successful
+      expect(response.status).to eq(422)
+      expect(response_data[:errors]).to eq([{:detail=>"Invalid Parameters"}])
     end
   end
 end
