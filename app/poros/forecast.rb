@@ -12,18 +12,18 @@ class Forecast
   end
 
   def check_current_weather(data)
+    unit_mapping = {
+      'imperial' => { temperature: :temp_f, feels_like: :feelslike_f },
+      'metric' => { temperature: :temp_c, feels_like: :feelslike_c },
+      nil => { temperature: :temp_f, feels_like: :feelslike_f }
+    }
+  
+    unit_data = unit_mapping[@units]
+  
     {
       last_updated: data[:last_updated],
-      temperature: if @units == 'imperial' || @units.nil?
-                     data[:temp_f]
-                   elsif @units == 'metric'
-                     data[:temp_c]
-                   end,
-      feels_like: if @units == 'imperial' || @units.nil?
-                    data[:feelslike_f]
-                  elsif @units == 'metric'
-                    data[:feelslike_c]
-                  end,
+      temperature: data[unit_data[:temperature]],
+      feels_like: data[unit_data[:feels_like]],
       humidity: data[:humidity],
       uvi: data[:uv],
       visibility: data[:vis_miles],
@@ -31,44 +31,48 @@ class Forecast
       icon: data[:condition][:icon]
     }
   end
-
+  
   def check_daily_weather(data)
+    unit_mapping = {
+      'imperial' => { max_temp: :maxtemp_f, min_temp: :mintemp_f },
+      'metric' => { max_temp: :maxtemp_c, min_temp: :mintemp_c },
+      nil => { max_temp: :maxtemp_f, min_temp: :mintemp_f }
+    }
+  
     data.map do |day|
+      unit_data = unit_mapping[@units]
+  
       {
         date: day[:date],
         sunrise: day[:astro][:sunrise],
         sunset: day[:astro][:sunset],
-        max_temp: if @units == 'imperial' || @units.nil?
-                    day[:day][:maxtemp_f]
-                  elsif @units == 'metric'
-                    day[:day][:maxtemp_c]
-                  end,
-        min_temp: if @units == 'imperial' || @units.nil?
-                    day[:day][:mintemp_f]
-                  elsif @units == 'metric'
-                    day[:day][:mintemp_c]
-                  end,
+        max_temp: day[:day][unit_data[:max_temp]],
+        min_temp: day[:day][unit_data[:min_temp]],
         condition: day[:day][:condition][:text],
         icon: day[:day][:condition][:icon]
       }
     end
-  end
+  end  
 
   def check_hourly_weather(data)
+    unit_mapping = {
+      'imperial' => :temp_f,
+      'metric' => :temp_c,
+      nil => :temp_f
+    }
+  
     data.map do |hour|
+      unit_key = unit_mapping[@units]
+  
       {
         time: format_time(hour[:time]),
-        temperature: if @units == 'imperial' || @units.nil?
-                       hour[:temp_f]
-                     elsif @units == 'metric'
-                       hour[:temp_c]
-                     end,
+        temperature: hour[unit_key],
         condition: hour[:condition][:text],
         icon: hour[:condition][:icon]
       }
     end
   end
-
+  
   private
 
   def format_time(time)
