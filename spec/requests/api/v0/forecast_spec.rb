@@ -1,11 +1,13 @@
+# frozen_string_literal: true
+
 require 'rails_helper'
 
-RSpec.describe "Forecast", type: :request do
-  describe "GET /api/v0/forecast?", :vcr do
-    context "happy path - with valid params" do
-      it "returns a forecast for a location" do
-        location = "denver,co"
-        units = "metric"
+RSpec.describe 'Forecast', type: :request do
+  describe 'GET /api/v0/forecast?', :vcr do
+    context 'happy path - with valid params' do
+      it 'returns a forecast for a location' do
+        location = 'denver,co'
+        units = 'metric'
         get "/api/v0/forecast?location=#{location}&units=#{units}"
 
         expect(response).to be_successful
@@ -17,12 +19,12 @@ RSpec.describe "Forecast", type: :request do
         expect(forecast[:id]).to eq(nil)
 
         expect(forecast).to have_key(:type)
-        expect(forecast[:type]).to eq("forecast")
+        expect(forecast[:type]).to eq('forecast')
 
         expect(forecast).to have_key(:attributes)
         expect(forecast[:attributes]).to be_a(Hash)
 
-        expect(forecast[:attributes]).to have_key(:current_weather) 
+        expect(forecast[:attributes]).to have_key(:current_weather)
         expect(forecast[:attributes][:current_weather]).to be_a(Hash)
 
         expect(forecast[:attributes][:current_weather]).to have_key(:last_updated)
@@ -31,7 +33,7 @@ RSpec.describe "Forecast", type: :request do
         expect(forecast[:attributes][:current_weather]).to have_key(:temperature)
         expect(forecast[:attributes][:current_weather][:temperature]).to be_a(Float)
 
-        expect(forecast[:attributes][:current_weather]).to have_key(:feels_like)  
+        expect(forecast[:attributes][:current_weather]).to have_key(:feels_like)
         expect(forecast[:attributes][:current_weather][:feels_like]).to be_a(Float)
 
         expect(forecast[:attributes][:current_weather]).to have_key(:humidity)
@@ -91,8 +93,8 @@ RSpec.describe "Forecast", type: :request do
         expect(forecast[:attributes][:hourly_weather][0][:icon]).to be_a(String)
       end
 
-      it "does not return unnecessary data" do
-        location = "denver,co"
+      it 'does not return unnecessary data' do
+        location = 'denver,co'
         get "/api/v0/forecast?location=#{location}"
 
         expect(response).to be_successful
@@ -125,11 +127,11 @@ RSpec.describe "Forecast", type: :request do
         expect(forecast[:attributes][:current_weather]).to_not have_key(:feels_like_c)
         expect(forecast[:attributes][:current_weather]).to_not have_key(:feels_like_f)
 
-        expect(forecast[:attributes][:current_weather]).to_not have_key(:vis_km)  
+        expect(forecast[:attributes][:current_weather]).to_not have_key(:vis_km)
 
         expect(forecast[:attributes][:current_weather]).to_not have_key(:gust_mph)
         expect(forecast[:attributes][:current_weather]).to_not have_key(:gust_kph)
-      
+
         # Daily Weather
         expect(forecast[:attributes][:daily_weather][0]).to_not have_key(:maxtemp_c)
         expect(forecast[:attributes][:daily_weather][0]).to_not have_key(:maxtemp_f)
@@ -170,16 +172,16 @@ RSpec.describe "Forecast", type: :request do
         expect(forecast[:attributes][:hourly_weather][0]).to_not have_key(:wind_kph)
         expect(forecast[:attributes][:hourly_weather][0]).to_not have_key(:wind_degree)
         expect(forecast[:attributes][:hourly_weather][0]).to_not have_key(:wind_dir)
-        
+
         expect(forecast[:attributes][:hourly_weather][0]).to_not have_key(:pressure_in)
         expect(forecast[:attributes][:hourly_weather][0]).to_not have_key(:pressure_mb)
-        
+
         expect(forecast[:attributes][:hourly_weather][0]).to_not have_key(:precip_in)
         expect(forecast[:attributes][:hourly_weather][0]).to_not have_key(:precip_mm)
-        
+
         expect(forecast[:attributes][:hourly_weather][0]).to_not have_key(:humidity)
         expect(forecast[:attributes][:hourly_weather][0]).to_not have_key(:cloud)
-        
+
         expect(forecast[:attributes][:hourly_weather][0]).to_not have_key(:feelslike_c)
         expect(forecast[:attributes][:hourly_weather][0]).to_not have_key(:feelslike_f)
 
@@ -197,20 +199,20 @@ RSpec.describe "Forecast", type: :request do
 
         expect(forecast[:attributes][:hourly_weather][0]).to_not have_key(:will_it_snow)
         expect(forecast[:attributes][:hourly_weather][0]).to_not have_key(:chance_of_snow)
-        
+
         expect(forecast[:attributes][:hourly_weather][0]).to_not have_key(:vis_km)
         expect(forecast[:attributes][:hourly_weather][0]).to_not have_key(:vis_miles)
 
         expect(forecast[:attributes][:hourly_weather][0]).to_not have_key(:gust_mph)
         expect(forecast[:attributes][:hourly_weather][0]).to_not have_key(:gust_kph)
-        
+
         expect(forecast[:attributes][:hourly_weather][0]).to_not have_key(:uv)
       end
     end
 
-    context "sad path - with invalid params" do
-      it "returns an error message" do
-        location = ""
+    context 'sad path - with invalid params' do
+      it 'returns an error message' do
+        location = ''
         get "/api/v0/forecast?location=#{location}"
 
         expect(response).to_not be_successful

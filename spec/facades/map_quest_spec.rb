@@ -1,9 +1,11 @@
+# frozen_string_literal: true
+
 require 'rails_helper'
 
 RSpec.describe MapQuestFacade, :vcr do
-  describe "initialize" do
-    it "returns the coordinates per location" do
-      location = "denver,co"
+  describe 'initialize' do
+    it 'returns the coordinates per location' do
+      location = 'denver,co'
 
       facade = MapQuestFacade.new(location)
       coordinates = facade.get_coordinates

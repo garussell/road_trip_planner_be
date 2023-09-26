@@ -1,10 +1,12 @@
+# frozen_string_literal: true
+
 require 'rails_helper'
 
-RSpec.describe "Background Image", type: :request do
-  describe "GET /api/v0/backgrounds?location=denver,co", :vcr do
-    context "happy path - with valid params" do
-      it "returns a background image for the location" do
-        location = "denver,co"
+RSpec.describe 'Background Image', type: :request do
+  describe 'GET /api/v0/backgrounds?location=denver,co', :vcr do
+    context 'happy path - with valid params' do
+      it 'returns a background image for the location' do
+        location = 'denver,co'
         get "/api/v0/backgrounds?location=#{location}"
 
         expect(response).to be_successful
@@ -16,7 +18,7 @@ RSpec.describe "Background Image", type: :request do
         expect(background_image[:id]).to eq(nil)
 
         expect(background_image).to have_key(:type)
-        expect(background_image[:type]).to eq("image")
+        expect(background_image[:type]).to eq('image')
 
         expect(background_image).to have_key(:attributes)
         expect(background_image[:attributes]).to be_a(Hash)
@@ -44,14 +46,14 @@ RSpec.describe "Background Image", type: :request do
       end
     end
 
-    context "sad path - with invalid params" do
-      it "returns an error message" do  
-        location = ""
+    context 'sad path - with invalid params' do
+      it 'returns an error message' do
+        location = ''
         get "/api/v0/backgrounds?location=#{location}"
 
         expect(response).to_not be_successful
         expect(response.status).to eq(400)
-        expect(response.body).to eq("{\"errors\":[{\"detail\":\"Location parameter is required\"}]}")
+        expect(response.body).to eq('{"errors":[{"detail":"Location parameter is required"}]}')
       end
     end
   end

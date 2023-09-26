@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class Image
   attr_reader :id, :image
 
@@ -12,7 +14,7 @@ class Image
       location: @location,
       image_url: data[:results].first[:urls][:raw],
       credit: {
-        source: "unsplash.com",
+        source: 'unsplash.com',
         author: data[:results].first[:user][:name],
         logo: data[:results].first[:user][:profile_image][:small]
       }

@@ -1,5 +1,7 @@
+# frozen_string_literal: true
+
 class BackgroundSerializer
-include JSONAPI::Serializer
+  include JSONAPI::Serializer
 
   set_type :image
 
