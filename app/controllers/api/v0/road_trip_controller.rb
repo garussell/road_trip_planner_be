@@ -3,8 +3,6 @@ class Api::V0::RoadTripController < ApplicationController
     user = User.authenticate(params[:api_key])
   
     if user
-      road_trip_params = params.permit(:origin, :destination, :api_key)
-  
       if road_trip_params.present? && valid_road_trip_params?
         road_trip = RoadTripFacade.create_road_trip(road_trip_params)
         if road_trip.travel_time.nil? || road_trip.weather_at_eta.nil?
@@ -24,7 +22,7 @@ class Api::V0::RoadTripController < ApplicationController
   private
 
   def road_trip_params
-    params.permit(:origin, :destination, :api_key)
+    params.permit(:origin, :destination, :units, :api_key)
   end
 
   def valid_road_trip_params?

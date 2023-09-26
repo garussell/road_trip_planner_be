@@ -1,7 +1,8 @@
 class Api::V0::ForecastController < ApplicationController
   def index
     location = params[:location]
-    
+    units = params[:units]
+
     if location
       begin
         cache_key = "forecast-#{location}"
@@ -13,7 +14,7 @@ class Api::V0::ForecastController < ApplicationController
           lat = coordinates.lat
           lng = coordinates.lng
   
-          ForecastFacade.new(lat, lng).forecast
+          ForecastFacade.new(lat, lng, units).forecast
         end
 
         render json: ForecastSerializer.new(cached_data)

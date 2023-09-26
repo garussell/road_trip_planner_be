@@ -5,7 +5,8 @@ RSpec.describe "Forecast", type: :request do
     context "happy path - with valid params" do
       it "returns a forecast for a location" do
         location = "denver,co"
-        get "/api/v0/forecast?location=#{location}"
+        units = "metric"
+        get "/api/v0/forecast?location=#{location}&units=#{units}"
 
         expect(response).to be_successful
 

@@ -9,7 +9,7 @@ class MapQuestFacade
     Coordinates.new(data)
   end
 
-  def get_travel_time(destination)
+  def get_time_object(destination)
     data = MapQuestService.get_directions(@location, destination)
     TravelTime.new(data)
   end

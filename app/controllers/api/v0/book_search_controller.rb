@@ -9,7 +9,7 @@ class Api::V0::BookSearchController < ApplicationController
   private 
 
   def book_search_params
-    params.permit(:location, :quantity)
+    params.permit(:location, :quantity, :units)
   end
 
   def validate_location
@@ -20,7 +20,7 @@ class Api::V0::BookSearchController < ApplicationController
 
   def real_location?(location)
     check_location = MapQuestFacade.new(location)
-    result = check_location.get_travel_time(location)
+    result = check_location.get_time_object(location)
     result.formatted_time.present?
   end
 end

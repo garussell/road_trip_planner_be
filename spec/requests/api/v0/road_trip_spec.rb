@@ -27,9 +27,9 @@ RSpec.describe "POST /api/v0/road_trip", :vcr do
       road_trip_params = {
         origin: "Denver,CO",
         destination: "Pueblo,CO",
+        units: "imperial",
         api_key: @api_key
       }
-
       post "/api/v0/road_trip", params: road_trip_params
 
       expect(response).to be_successful
