@@ -7,8 +7,6 @@ module Api
         location = params[:location]
         units = params[:units]
 
-        return unless location
-
         begin
           cache_key = "forecast-#{location}"
 
