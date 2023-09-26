@@ -8,19 +8,19 @@
 
 1. [Learning Goals](#learning-goals)
 2. [Project Description](#project-description)
-3. [Setup](#setup)
-4. [Data Structure](#data-structure)
-5. [End Points](#end-points)
-6. [Suggestions for Use](#suggestions-for-use)
-7. [Contributors](#contributors)
+3. [Example Code](#example-code)
+4. [Setup](#setup)
+5. [Data Structure](#data-structure)
+6. [End Points](#end-points)
+7. [Suggestions for Use](#suggestions-for-use)
+8. [Contributors](#contributors)
 
 ## Learning Goals
-- Practice geolocation services and integration of multiple APIs as a microservice.
-- Practice permission using `bcrypt` with password_digest.
+- Expose API with integration of multiple APIs, including requiring an authentication token.
 - Utilize ErrorSerializer and JSONAPI formatting.
 - Impliment `caching` to speed up process when search query includes location / city & state or latitude & longitude.
-- Practice robust testing for poros, services, facades, and requests.
-
+- Complete application based on criteria from other developers.
+- Practice robust testing for poros, services, facades, and requests using mocking tool VCR.
 
 ## Project Description
 **Whether, Sweater** is a back-end project that exposes two API endpoints to make data available from [MapQuest API](https://developer.mapquest.com/documentation/geocoding-api/) and [Weather API](https://www.weatherapi.com/).  It allows the front-end to obtain JSON data that contains whether information for a city, where the city and state are passed in the URL boday as a location param.  This API also utilizes [OpenLibrary API](https://openlibrary.org/developers) to search for books about the destination location.  Additionally, there is an endpoint that retrieves a background image from [Unsplash API](https://unsplash.com/developers).
