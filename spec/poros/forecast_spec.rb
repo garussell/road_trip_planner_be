@@ -91,7 +91,9 @@ RSpec.describe "Forecast", type: :poros do
               :uv=>1.0}
             ]}]}}
  
-      forecast = Forecast.new(raw_data)
+      units = "imperial"
+      forecast = Forecast.new(raw_data, units)
+      
       expect(forecast).to be_a(Forecast)
       expect(forecast.current_weather).to be_a(Hash)
       expect(forecast.daily_weather).to be_a(Array)

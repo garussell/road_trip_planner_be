@@ -3,6 +3,7 @@ class RoadTrip
 
   def initialize(params)
     @id = id
+    @units = params[:units]
     @start_city = params[:origin]
     @end_city = params[:destination]
     @travel_time = calculate_travel_time.formatted_time 
@@ -12,7 +13,7 @@ class RoadTrip
   end
 
   def calculate_travel_time
-    MapQuestFacade.new(@start_city).get_travel_time(@end_city)
+    MapQuestFacade.new(@start_city).get_time_object(@end_city)
   end
 
   def calculate_weather_at_eta
@@ -21,7 +22,7 @@ class RoadTrip
       lat = coordinates.lat
       lng = coordinates.lng
 
-      forecast = ForecastFacade.new(lat, lng).forecast
+      forecast = ForecastFacade.new(lat, lng, @units).forecast
 
       {
         datetime: (Time.now + @seconds).strftime("%Y-%m-%d %H:%M"),

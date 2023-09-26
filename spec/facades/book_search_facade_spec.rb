@@ -2,7 +2,7 @@ require 'rails_helper'
 
 RSpec.describe BookSearchFacade, :vcr do
   before do
-    @book_search = BookSearchFacade.new({location: "denver,co", quantity: 5})
+    @book_search = BookSearchFacade.new({location: "denver,co", quantity: 5, units: "metric"})
   end
 
   describe "initialize" do

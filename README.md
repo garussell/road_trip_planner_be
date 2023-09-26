@@ -39,11 +39,11 @@
 - `hourly_weather` holds array of 24 hours data for current day‘‘‘: `time` (format "22:00"), `temperature` (float / Fahrenheit), `conditions` (string / per hour), `icon` (png string for weather condition per hour)
 
 ## End-Points
-- Get weather for a city: `GET /api/v0/forecast?location=cincinatti,oh` - data can be sent as params
+- Get weather for a city: `GET /api/v0/forecast?location=cincinatti,oh` - data can be sent as params, `units` are optional ("imperial" or "metric") - Units default to imperial.
 - User Registration: `POST /api/v0/users` - raw data needs to be sent in the body of the request
 - Login: `POST /api/v0/sessions` - raw data needs to be sent in the body of the request
-- Create Roadtrip: `POST /api/v0/road_trip` - raw data needs to be sent in the body of the request
-- Search Books: `GET /api/v0/book_search?location=#{location}&quantity=#{quantity}` - data can be sent as params (location); quantity optional
+- Create Roadtrip: `POST /api/v0/road_trip` - raw data needs to be sent in the body of the request, `units` are optional but can be passed as params ("imperial" or "metric") - Units default to imperial.
+- Search Books: `GET /api/v0/book_search?location=#{location}&quantity=#{quantity}` - data can be sent as params (location); `quantity`: optional, `units`: optional ("imperial" or "metric").  Units default to imperial.
 - Backgrounds: `GET api/v0/backgrounds?location=#{location}` - will return a photo of that location
 
 ## Suggestions for Use

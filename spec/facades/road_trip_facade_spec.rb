@@ -7,6 +7,7 @@ RSpec.describe RoadTripFacade, :vcr do
       road_trip_params = {
         origin: "Denver,CO",
         destination: "Pueblo,CO",
+        units: "imperial",
         api_key: "jgn983hy48thw9begh98h4539h4"
       }
 

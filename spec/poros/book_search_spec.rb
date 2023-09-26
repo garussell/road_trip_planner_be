@@ -68,7 +68,8 @@ RSpec.describe "Book Search", type: :poros do
          :author_facet=>["OL79165A United States Geological Survey"]}
       ]}
 
-      book_search = BookSearch.new("denver,co", raw_data)
+      units = "imperial"
+      book_search = BookSearch.new("denver,co", raw_data, units)
 
       expect(book_search).to be_a(BookSearch)
       expect(book_search.id).to eq(nil)
