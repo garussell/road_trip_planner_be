@@ -23,7 +23,7 @@
 - Practice robust testing for poros, services, facades, and requests using mocking tool VCR.
 
 ## Project Description
-**Whether, Sweater** is a back-end project that exposes two API endpoints to make data available from [MapQuest API](https://developer.mapquest.com/documentation/geocoding-api/) and [Weather API](https://www.weatherapi.com/).  It allows the front-end to obtain JSON data that contains whether information for a city, where the city and state are passed in the URL boday as a location param.  This API also utilizes [OpenLibrary API](https://openlibrary.org/developers) to search for books about the destination location.  Additionally, there is an endpoint that retrieves a background image from [Unsplash API](https://unsplash.com/developers).
+**Whether, Sweater** is a back-end project that exposes multiple API endpoints to make data available from [MapQuest API](https://developer.mapquest.com/documentation/geocoding-api/), [Unspash API](https://unsplash.com/documentation), [Open Library API](https://openlibrary.org/developers), and [Weather API](https://www.weatherapi.com/).  It allows the front-end to obtain JSON data that contains weather forecast information for a city, where the city and state are passed in the URL body as a location param.  This API also utilizes [OpenLibrary API](https://openlibrary.org/developers) to search for books about the destination location.  Additionally, there is an endpoint that retrieves a background image from [Unsplash API](https://unsplash.com/developers).
 
 ## Example Code
 ![Screenshot 2023-09-26 at 9 41 02 AM](https://github.com/garussell/whether_sweater/assets/125214565/022fd3f7-fa08-4689-95db-96ae4ee8306a)
