@@ -1,6 +1,8 @@
 # Whether, Sweater - Project README
 # Back-End API
 
+<img width="1152" alt="Screenshot 2023-09-26 at 9 39 44 AM" src="https://github.com/garussell/whether_sweater/assets/125214565/935b660e-b208-46f6-9001-089c62c866b5">
+
 ## Table of Contents
 
 1. [Learning Goals](#learning-goals)
@@ -21,6 +23,12 @@
 
 ## Project Description
 **Whether, Sweater** is a back-end project that exposes two API endpoints to make data available from [MapQuest API](https://developer.mapquest.com/documentation/geocoding-api/) and [Weather API](https://www.weatherapi.com/).  It allows the front-end to obtain JSON data that contains whether information for a city, where the city and state are passed in the URL boday as a location param.  This API also utilizes [OpenLibrary API](https://openlibrary.org/developers) to search for books about the destination location.  Additionally, there is an endpoint that retrieves a background image from [Unsplash API](https://unsplash.com/developers).
+
+## Example Code
+![Screenshot 2023-09-26 at 9 41 02 AM](https://github.com/garussell/whether_sweater/assets/125214565/022fd3f7-fa08-4689-95db-96ae4ee8306a)
+![Screenshot 2023-09-26 at 9 43 01 AM](https://github.com/garussell/whether_sweater/assets/125214565/dedb6d11-6371-49dc-b57c-1b8ef6617a83)
+![Screenshot 2023-09-26 at 9 44 00 AM](https://github.com/garussell/whether_sweater/assets/125214565/533c7700-6a52-434b-839d-8418255ac356)
+![Screenshot 2023-09-26 at 9 44 18 AM](https://github.com/garussell/whether_sweater/assets/125214565/a0691cf6-88ef-434c-b7c7-bc9f4c0b63a5)
 
 ## Setup
 - Ruby 3.2.2
