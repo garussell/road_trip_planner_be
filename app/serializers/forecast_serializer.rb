@@ -1,8 +1,10 @@
+# frozen_string_literal: true
+
 class ForecastSerializer
-include JSONAPI::Serializer
+  include JSONAPI::Serializer
   set_type 'forecast'
   attributes :current_weather, :daily_weather, :hourly_weather
-  
+
   attribute :current_weather do |object|
     object.instance_variable_get(:@current_weather)
   end

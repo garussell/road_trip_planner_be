@@ -1,9 +1,11 @@
+# frozen_string_literal: true
+
 require 'rails_helper'
 
 RSpec.describe UnsplashService, :vcr do
-  describe "get_image" do
-    it "retrieves image based on location" do
-      location = "denver,co"
+  describe 'get_image' do
+    it 'retrieves image based on location' do
+      location = 'denver,co'
       image = UnsplashService.get_image(location)
 
       expect(image).to be_a(Hash)

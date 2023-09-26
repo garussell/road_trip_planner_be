@@ -1,9 +1,11 @@
+# frozen_string_literal: true
+
 require 'rails_helper'
 
 RSpec.describe LibraryService, :vcr do
-  describe "get_books" do
-    it "returns books for a location and quantity" do
-      location = "denver,co"
+  describe 'get_books' do
+    it 'returns books for a location and quantity' do
+      location = 'denver,co'
       quantity = 5
       service = LibraryService.get_books(location, quantity)
 

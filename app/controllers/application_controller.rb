@@ -1,8 +1,8 @@
-class ApplicationController < ActionController::API
+# frozen_string_literal: true
 
-  
+class ApplicationController < ActionController::API
   def fetch_or_cache(key)
-    cached = Rails.cache.read(key)  
+    cached = Rails.cache.read(key)
 
     if cached.present?
       cached

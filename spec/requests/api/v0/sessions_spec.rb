@@ -1,25 +1,27 @@
+# frozen_string_literal: true
+
 require 'rails_helper'
 
-RSpec.describe "POST /api/v0/sessions" do
+RSpec.describe 'POST /api/v0/sessions' do
   before do
     user_params = {
-      email: "fake@gmail.com",
-      password: "password",
-      password_confirmation: "password"
-      }
+      email: 'fake@gmail.com',
+      password: 'password',
+      password_confirmation: 'password'
+    }
 
-    post "/api/v0/users", params: user_params
+    post '/api/v0/users', params: user_params
   end
 
-  context "happy path - user found and verified" do
-    it "returns a 200 status code" do
+  context 'happy path - user found and verified' do
+    it 'returns a 200 status code' do
       user_params = {
-        email: "fake@gmail.com",
-        password: "password",
-        }
-      
-      post "/api/v0/sessions", params: user_params
-      
+        email: 'fake@gmail.com',
+        password: 'password'
+      }
+
+      post '/api/v0/sessions', params: user_params
+
       expect(response).to be_successful
       expect(response.status).to eq(200)
 
@@ -30,7 +32,7 @@ RSpec.describe "POST /api/v0/sessions" do
       expect(session[:id]).to be_a(String)
 
       expect(session).to have_key(:type)
-      expect(session[:type]).to eq("users")
+      expect(session[:type]).to eq('users')
 
       expect(session).to have_key(:attributes)
       expect(session[:attributes]).to be_a(Hash)
@@ -43,38 +45,38 @@ RSpec.describe "POST /api/v0/sessions" do
     end
   end
 
-  context "sad path - user not found or invalide email or password" do
-    it "returns a 422 status code" do
+  context 'sad path - user not found or invalide email or password' do
+    it 'returns a 422 status code' do
       # User not registered
       user_params = {
-        email: "veryfake@gmail.com",
-        password: "password",
-        }
+        email: 'veryfake@gmail.com',
+        password: 'password'
+      }
 
-      post "/api/v0/sessions", params: user_params
+      post '/api/v0/sessions', params: user_params
 
       expect(response).to_not be_successful
       expect(response.status).to eq(422)
-      expect(response.body).to eq("{\"errors\":[{\"detail\":\"Invalid email or password\"}]}")
+      expect(response.body).to eq('{"errors":[{"detail":"Invalid email or password"}]}')
 
       # User registered but wrong password
-      user_params_2 = {
-        email: "superfake@gmail.com",
-        password: "password",
-        }
+      user_params_b = {
+        email: 'superfake@gmail.com',
+        password: 'password'
+      }
 
-      post "/api/v0/users", params: user_params_2
+      post '/api/v0/users', params: user_params_b
 
-      user_params_3 = {
-        email: "superfake@gmail.com",
-        password: "wrongpassword"
-        }
-      
-      post "/api/v0/sessions", params: user_params_3
-        
+      user_params_c = {
+        email: 'superfake@gmail.com',
+        password: 'wrongpassword'
+      }
+
+      post '/api/v0/sessions', params: user_params_c
+
       expect(response).to_not be_successful
       expect(response.status).to eq(422)
-      expect(response.body).to eq("{\"errors\":[{\"detail\":\"Invalid email or password\"}]}")
+      expect(response.body).to eq('{"errors":[{"detail":"Invalid email or password"}]}')
     end
   end
 end

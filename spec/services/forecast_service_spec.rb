@@ -1,8 +1,10 @@
+# frozen_string_literal: true
+
 require 'rails_helper'
 
 RSpec.describe ForecastService, :vcr do
-  describe "get_forecast" do 
-    it "returns the forecast for a location" do
+  describe 'get_forecast' do
+    it 'returns the forecast for a location' do
       lat = 39.738453
       lng = -104.984853
       service = ForecastService.get_forecast(lat, lng)
@@ -80,7 +82,7 @@ RSpec.describe ForecastService, :vcr do
       # Hourly Weather
       expect(service[:forecast][:forecastday][0]).to have_key(:hour)
       expect(service[:forecast][:forecastday][0][:hour]).to be_a(Array)
-      
+
       expect(service[:forecast][:forecastday][0][:hour].count).to eq(24)
 
       expect(service[:forecast][:forecastday][0][:hour][0]).to have_key(:time)
@@ -94,7 +96,7 @@ RSpec.describe ForecastService, :vcr do
 
       expect(service[:forecast][:forecastday][0][:hour][0][:condition]).to have_key(:text)
       expect(service[:forecast][:forecastday][0][:hour][0][:condition][:text]).to be_a(String)
-      
+
       expect(service[:forecast][:forecastday][0][:hour][0][:condition]).to have_key(:icon)
       expect(service[:forecast][:forecastday][0][:hour][0][:condition][:icon]).to be_a(String)
     end

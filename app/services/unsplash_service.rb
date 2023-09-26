@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class UnsplashService
   def self.get_image(location)
     get_url("/search/photos?query=#{location}&per_page=1")

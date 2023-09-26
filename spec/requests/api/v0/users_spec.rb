@@ -1,20 +1,22 @@
+# frozen_string_literal: true
+
 require 'rails_helper'
 
-RSpec.describe "Register Users" do
-  describe "POST /api/v0/users" do
-    context "happy path - user is created" do
-      it "returns a 201 status code" do
+RSpec.describe 'Register Users' do
+  describe 'POST /api/v0/users' do
+    context 'happy path - user is created' do
+      it 'returns a 201 status code' do
         user_params = {
-          email: "fake@gmail.com",
-          password: "password",
-          password_confirmation: "password"
-          }
+          email: 'fake@gmail.com',
+          password: 'password',
+          password_confirmation: 'password'
+        }
 
-        post "/api/v0/users", params: user_params
-      
+        post '/api/v0/users', params: user_params
+
         expect(response).to be_successful
         expect(response.status).to eq(201)
-        
+
         response_data = JSON.parse(response.body, symbolize_names: true)
         user = response_data[:data]
 
@@ -22,7 +24,7 @@ RSpec.describe "Register Users" do
         expect(user[:id]).to be_a(String)
 
         expect(user).to have_key(:type)
-        expect(user[:type]).to eq("users")
+        expect(user[:type]).to eq('users')
 
         expect(user).to have_key(:attributes)
         expect(user[:attributes]).to be_a(Hash)
@@ -38,36 +40,36 @@ RSpec.describe "Register Users" do
       end
     end
 
-    context "sad path - user is not created" do
-      it "returns a 422 status code" do
+    context 'sad path - user is not created' do
+      it 'returns a 422 status code' do
         user_params = {
-          email: "fake@gmail.com",
-          password: "password",
-          password_confirmation: "wrongpassword"
-          }
+          email: 'fake@gmail.com',
+          password: 'password',
+          password_confirmation: 'wrongpassword'
+        }
 
-        post "/api/v0/users", params: user_params
+        post '/api/v0/users', params: user_params
         expect(response).to_not be_successful
 
         expect(response.status).to eq(422)
-        expect(response.body).to eq("{\"errors\":[{\"detail\":\"Invalid Parameters\"}]}")
+        expect(response.body).to eq('{"errors":[{"detail":"Invalid Parameters"}]}')
       end
 
-      it "returns a 422 status code if user already exists" do
+      it 'returns a 422 status code if user already exists' do
         user_params = {
-          email: "veryfake@gmail.com",
-          password: "password",
-          password_confirmation: "password"
-          }
+          email: 'veryfake@gmail.com',
+          password: 'password',
+          password_confirmation: 'password'
+        }
 
-          post "/api/v0/users", params: user_params
-          expect(response).to be_successful
+        post '/api/v0/users', params: user_params
+        expect(response).to be_successful
 
-          post "/api/v0/users", params: user_params
-          expect(response).to_not be_successful
-          
-          expect(response.status).to eq(422)
-          expect(response.body).to eq("{\"errors\":[{\"detail\":\"Email already exists\"}]}")
+        post '/api/v0/users', params: user_params
+        expect(response).to_not be_successful
+
+        expect(response.status).to eq(422)
+        expect(response.body).to eq('{"errors":[{"detail":"Email already exists"}]}')
       end
     end
   end

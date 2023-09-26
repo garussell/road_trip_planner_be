@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class TravelTime
   attr_reader :formatted_time, :seconds
 

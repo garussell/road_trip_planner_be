@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class RoadTripFacade
   def self.create_road_trip(params)
     road_trip = RoadTrip.new(params)

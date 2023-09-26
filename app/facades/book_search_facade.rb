@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class BookSearchFacade
   def initialize(params)
     @location = params[:location]

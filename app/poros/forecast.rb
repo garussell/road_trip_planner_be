@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class Forecast
   attr_reader :id, :current_weather, :daily_weather, :hourly_weather
 
@@ -12,14 +14,14 @@ class Forecast
   def check_current_weather(data)
     {
       last_updated: data[:last_updated],
-      temperature: if @units == "imperial" || @units == nil
-                    data[:temp_f]
-                  elsif @units == "metric"
-                    data[:temp_c]
-                  end,
-      feels_like: if @units == "imperial" || @units == nil
+      temperature: if @units == 'imperial' || @units.nil?
+                     data[:temp_f]
+                   elsif @units == 'metric'
+                     data[:temp_c]
+                   end,
+      feels_like: if @units == 'imperial' || @units.nil?
                     data[:feelslike_f]
-                  elsif @units == "metric"
+                  elsif @units == 'metric'
                     data[:feelslike_c]
                   end,
       humidity: data[:humidity],
@@ -36,14 +38,14 @@ class Forecast
         date: day[:date],
         sunrise: day[:astro][:sunrise],
         sunset: day[:astro][:sunset],
-        max_temp: if @units == "imperial" || @units == nil
+        max_temp: if @units == 'imperial' || @units.nil?
                     day[:day][:maxtemp_f]
-                  elsif @units == "metric"
+                  elsif @units == 'metric'
                     day[:day][:maxtemp_c]
                   end,
-        min_temp: if @units == "imperial" || @units == nil
+        min_temp: if @units == 'imperial' || @units.nil?
                     day[:day][:mintemp_f]
-                  elsif @units == "metric"
+                  elsif @units == 'metric'
                     day[:day][:mintemp_c]
                   end,
         condition: day[:day][:condition][:text],
@@ -56,11 +58,11 @@ class Forecast
     data.map do |hour|
       {
         time: format_time(hour[:time]),
-        temperature:  if @units == "imperial" || @units == nil
-                        hour[:temp_f]
-                      elsif @units == "metric"
-                        hour[:temp_c]
-                      end,
+        temperature: if @units == 'imperial' || @units.nil?
+                       hour[:temp_f]
+                     elsif @units == 'metric'
+                       hour[:temp_c]
+                     end,
         condition: hour[:condition][:text],
         icon: hour[:condition][:icon]
       }
@@ -70,6 +72,6 @@ class Forecast
   private
 
   def format_time(time)
-    Time.parse(time).strftime("%H:%M")
+    Time.parse(time).strftime('%H:%M')
   end
 end

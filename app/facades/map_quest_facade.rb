@@ -1,5 +1,6 @@
-class MapQuestFacade
+# frozen_string_literal: true
 
+class MapQuestFacade
   def initialize(location)
     @location = location
   end
