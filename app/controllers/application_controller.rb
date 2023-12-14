@@ -2,8 +2,8 @@
 
 class ApplicationController < ActionController::API
   def fetch_or_cache(key)
+    require 'pry';binding.pry
     cached = Rails.cache.read(key)
-
     if cached.present?
       cached
     else

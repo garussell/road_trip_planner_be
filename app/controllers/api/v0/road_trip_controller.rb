@@ -21,7 +21,7 @@ module Api
       private
 
       def road_trip_params
-        params.permit(:origin, :destination, :units, :api_key)
+        params.require(:road_trip).permit(:origin, :destination, :units, :api_key)
       end
 
       def road_trip_valid?(road_trip)
