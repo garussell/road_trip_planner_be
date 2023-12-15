@@ -8,7 +8,7 @@ class BookSearch
     @units = units unless units.nil?
     @destination = location
     @forecast = get_forecast
-    @books = list_books(data)
+    @books = list_books(data) 
   end
 
   def get_forecast
@@ -28,11 +28,11 @@ class BookSearch
   def list_books(data)
     data.map do |book|
       {
-        title: book[0][:title],
-        author: book[0][:author_name],
-        publish_year: book[0][:publish_year],
-        publisher: book[0][:publisher].first,
-        preview: book[1][1][:preview_url]
+        title: book[0][:title] || 'No Title Available',
+        author: book[0][:author_name] || ['No Author Available'],
+        publish_year: book[0][:publish_year] || ['No Publish Year Available'],
+        publisher: book[0][:publisher].first || 'No Publisher Available',
+        preview: book[1][1][:preview_url] || 'No Preview Available'
       }
     end
   end

@@ -65,11 +65,20 @@ RSpec.describe 'GET /api/v0/book_search', :vcr do
       expect(book_search[:attributes][:books].count).to eq(5)
       expect(book_search[:attributes][:books].first).to be_a(Hash)
 
-      expect(book_search[:attributes][:books].first).to have_key(:isbn)
-      expect(book_search[:attributes][:books].first[:isbn]).to be_a(Array)
-
       expect(book_search[:attributes][:books].first).to have_key(:title)
       expect(book_search[:attributes][:books].first[:title]).to be_a(String)
+
+      expect(book_search[:attributes][:books].first).to have_key(:author)
+      expect(book_search[:attributes][:books].first[:author].first).to be_a(String)
+
+      expect(book_search[:attributes][:books].first).to have_key(:publish_year)
+      expect(book_search[:attributes][:books].first[:publish_year].first).to be_a(Integer)
+
+      expect(book_search[:attributes][:books].first).to have_key(:publisher)
+      expect(book_search[:attributes][:books].first[:publisher]).to be_a(String)
+
+      expect(book_search[:attributes][:books].first).to have_key(:preview)
+      expect(book_search[:attributes][:books].first[:preview]).to be_a(String)
     end
   end
 

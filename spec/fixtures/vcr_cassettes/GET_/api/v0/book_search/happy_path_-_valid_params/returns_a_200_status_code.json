@@ -312,6 +312,70 @@
         }
       },
       "recorded_at": "Mon, 25 Sep 2023 19:48:41 GMT"
+    },
+    {
+      "request": {
+        "method": "get",
+        "uri": "https://openlibrary.org/api/books?bibkeys=OLID:OL10909613M,%20OL10945157M,%20OL10945156M,%20OL7772425M,%20OL10911511M&format=json&jscmd=viewapi",
+        "body": {
+          "encoding": "US-ASCII",
+          "string": ""
+        },
+        "headers": {
+          "User-Agent": [
+            "Faraday v2.7.11"
+          ],
+          "Accept-Encoding": [
+            "gzip;q=1.0,deflate;q=0.6,identity;q=0.3"
+          ],
+          "Accept": [
+            "*/*"
+          ]
+        }
+      },
+      "response": {
+        "status": {
+          "code": 200,
+          "message": "OK"
+        },
+        "headers": {
+          "Server": [
+            "nginx/1.18.0 (Ubuntu)"
+          ],
+          "Date": [
+            "Fri, 15 Dec 2023 21:49:31 GMT"
+          ],
+          "Content-Type": [
+            "application/json"
+          ],
+          "Transfer-Encoding": [
+            "chunked"
+          ],
+          "Connection": [
+            "keep-alive"
+          ],
+          "Access-Control-Allow-Origin": [
+            "*"
+          ],
+          "Access-Control-Allow-Method": [
+            "GET, OPTIONS"
+          ],
+          "Access-Control-Max-Age": [
+            "86400"
+          ],
+          "X-Ol-Stats": [
+            "\"MC 2 0.001 TT 0 0.007\""
+          ],
+          "Referrer-Policy": [
+            "no-referrer-when-downgrade"
+          ]
+        },
+        "body": {
+          "encoding": "UTF-8",
+          "string": "{\"OLID:OL10909613M\": {\"bib_key\": \"OLID:OL10909613M\", \"info_url\": \"https://openlibrary.org/books/OL10909613M/Denver_Co\", \"preview\": \"noview\", \"preview_url\": \"https://openlibrary.org/books/OL10909613M/Denver_Co\"}, \" OL10945157M\": {\"bib_key\": \" OL10945157M\", \"info_url\": \"https://openlibrary.org/books/OL10945157M/Denver_west_CO_and_Bailey_CO_Denver_CO\", \"preview\": \"noview\", \"preview_url\": \"https://openlibrary.org/books/OL10945157M/Denver_west_CO_and_Bailey_CO_Denver_CO\"}, \" OL10945156M\": {\"bib_key\": \" OL10945156M\", \"info_url\": \"https://openlibrary.org/books/OL10945156M/Denver_East_CO_and_Castle_Rock_CO_Denver_CO\", \"preview\": \"noview\", \"preview_url\": \"https://openlibrary.org/books/OL10945156M/Denver_East_CO_and_Castle_Rock_CO_Denver_CO\"}, \" OL7772425M\": {\"bib_key\": \" OL7772425M\", \"info_url\": \"https://openlibrary.org/books/OL7772425M/Rand_McNally_Streetfinder\", \"preview\": \"borrow\", \"preview_url\": \"https://archive.org/details/denverregionalcl0000pier\", \"thumbnail_url\": \"https://covers.openlibrary.org/b/id/13060547-S.jpg\"}, \" OL10911511M\": {\"bib_key\": \" OL10911511M\", \"info_url\": \"https://openlibrary.org/books/OL10911511M/Denver_Co_Deluxe_Flip_Map\", \"preview\": \"noview\", \"preview_url\": \"https://openlibrary.org/books/OL10911511M/Denver_Co_Deluxe_Flip_Map\"}}"
+        }
+      },
+      "recorded_at": "Fri, 15 Dec 2023 21:49:31 GMT"
     }
   ],
   "recorded_with": "VCR 6.2.0"

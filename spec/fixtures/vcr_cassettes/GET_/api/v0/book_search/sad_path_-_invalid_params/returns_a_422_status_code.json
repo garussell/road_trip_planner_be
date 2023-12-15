@@ -385,6 +385,134 @@
         }
       },
       "recorded_at": "Mon, 25 Sep 2023 19:48:44 GMT"
+    },
+    {
+      "request": {
+        "method": "get",
+        "uri": "https://openlibrary.org/search.json?limit=5&q=denver,co",
+        "body": {
+          "encoding": "US-ASCII",
+          "string": ""
+        },
+        "headers": {
+          "User-Agent": [
+            "Faraday v2.7.11"
+          ],
+          "Accept-Encoding": [
+            "gzip;q=1.0,deflate;q=0.6,identity;q=0.3"
+          ],
+          "Accept": [
+            "*/*"
+          ]
+        }
+      },
+      "response": {
+        "status": {
+          "code": 200,
+          "message": "OK"
+        },
+        "headers": {
+          "Server": [
+            "nginx/1.18.0 (Ubuntu)"
+          ],
+          "Date": [
+            "Fri, 15 Dec 2023 21:49:31 GMT"
+          ],
+          "Content-Type": [
+            "application/json"
+          ],
+          "Transfer-Encoding": [
+            "chunked"
+          ],
+          "Connection": [
+            "keep-alive"
+          ],
+          "Access-Control-Allow-Origin": [
+            "*"
+          ],
+          "Access-Control-Allow-Method": [
+            "GET, OPTIONS"
+          ],
+          "Access-Control-Max-Age": [
+            "86400"
+          ],
+          "X-Ol-Stats": [
+            "\"SR 1 0.094 TT 0 0.095\""
+          ],
+          "Referrer-Policy": [
+            "no-referrer-when-downgrade"
+          ]
+        },
+        "body": {
+          "encoding": "UTF-8",
+          "string": "{\n    \"numFound\": 780,\n    \"start\": 0,\n    \"numFoundExact\": true,\n    \"docs\": [\n        {\n            \"key\": \"/works/OL8503198W\",\n            \"type\": \"work\",\n            \"seed\": [\n                \"/books/OL10909613M\",\n                \"/works/OL8503198W\",\n                \"/authors/OL2843451A\"\n            ],\n            \"title\": \"Denver, Co\",\n            \"title_suggest\": \"Denver, Co\",\n            \"title_sort\": \"Denver, Co\",\n            \"edition_count\": 1,\n            \"edition_key\": [\n                \"OL10909613M\"\n            ],\n            \"publish_date\": [\n                \"January 2001\"\n            ],\n            \"publish_year\": [\n                2001\n            ],\n            \"first_publish_year\": 2001,\n            \"isbn\": [\n                \"0762507845\",\n                \"9780762507849\"\n            ],\n            \"last_modified_i\": 1338943517,\n            \"ebook_count_i\": 0,\n            \"ebook_access\": \"no_ebook\",\n            \"has_fulltext\": false,\n            \"public_scan_b\": false,\n            \"publisher\": [\n                \"Universal Map Enterprises\"\n            ],\n            \"language\": [\n                \"eng\"\n            ],\n            \"author_key\": [\n                \"OL2843451A\"\n            ],\n            \"author_name\": [\n                \"Universal Map\"\n            ],\n            \"publisher_facet\": [\n                \"Universal Map Enterprises\"\n            ],\n            \"_version_\": 1767942895778660352,\n            \"author_facet\": [\n                \"OL2843451A Universal Map\"\n            ]\n        },\n        {\n            \"key\": \"/works/OL4437736W\",\n            \"type\": \"work\",\n            \"seed\": [\n                \"/books/OL10911511M\",\n                \"/works/OL4437736W\",\n                \"/authors/OL882946A\"\n            ],\n            \"title\": \"Denver Co Deluxe Flip Map\",\n            \"title_suggest\": \"Denver Co Deluxe Flip Map\",\n            \"title_sort\": \"Denver Co Deluxe Flip Map\",\n            \"edition_count\": 1,\n            \"edition_key\": [\n                \"OL10911511M\"\n            ],\n            \"publish_date\": [\n                \"January 2003\"\n            ],\n            \"publish_year\": [\n                2003\n            ],\n            \"first_publish_year\": 2003,\n            \"isbn\": [\n                \"0762557362\",\n                \"9780762557363\"\n            ],\n            \"last_modified_i\": 1260838560,\n            \"ebook_count_i\": 0,\n            \"ebook_access\": \"no_ebook\",\n            \"has_fulltext\": false,\n            \"public_scan_b\": false,\n            \"publisher\": [\n                \"Universal Map Enterprises\"\n            ],\n            \"language\": [\n                \"eng\"\n            ],\n            \"author_key\": [\n                \"OL882946A\"\n            ],\n            \"author_name\": [\n                \"Laura Ryder\"\n            ],\n            \"publisher_facet\": [\n                \"Universal Map Enterprises\"\n            ],\n            \"_version_\": 1767935634853330944,\n            \"author_facet\": [\n                \"OL882946A Laura Ryder\"\n            ]\n        },\n        {\n            \"key\": \"/works/OL8808821W\",\n            \"type\": \"work\",\n            \"seed\": [\n                \"/books/OL8537031M\",\n                \"/works/OL8808821W\",\n                \"/authors/OL3010394A\"\n            ],\n            \"title\": \"University of Denver Co 2007\",\n            \"title_suggest\": \"University of Denver Co 2007\",\n            \"title_sort\": \"University of Denver Co 2007\",\n            \"edition_count\": 1,\n            \"edition_key\": [\n                \"OL8537031M\"\n            ],\n            \"publish_date\": [\n                \"July 1, 2006\"\n            ],\n            \"publish_year\": [\n                2006\n            ],\n            \"first_publish_year\": 2006,\n            \"number_of_pages_median\": 180,\n            \"oclc\": [\n                \"150368610\"\n            ],\n            \"isbn\": [\n                \"9781427401687\",\n                \"1427401683\"\n            ],\n            \"last_modified_i\": 1304171421,\n            \"ebook_count_i\": 0,\n            \"ebook_access\": \"no_ebook\",\n            \"has_fulltext\": false,\n            \"public_scan_b\": false,\n            \"cover_edition_key\": \"OL8537031M\",\n            \"cover_i\": 1847337,\n            \"publisher\": [\n                \"College Prowler\"\n            ],\n            \"language\": [\n                \"eng\"\n            ],\n            \"author_key\": [\n                \"OL3010394A\"\n            ],\n            \"author_name\": [\n                \"College Prowler\"\n            ],\n            \"id_goodreads\": [\n                \"2985742\"\n            ],\n            \"publisher_facet\": [\n                \"College Prowler\"\n            ],\n            \"_version_\": 1767943535849373696,\n            \"author_facet\": [\n                \"OL3010394A College Prowler\"\n            ]\n        },\n        {\n            \"key\": \"/works/OL896607W\",\n            \"type\": \"work\",\n            \"seed\": [\n                \"/books/OL10945157M\",\n                \"/works/OL896607W\",\n                \"/authors/OL79165A\"\n            ],\n            \"title\": \"Denver west, CO and Bailey, CO: Denver, CO\",\n            \"title_suggest\": \"Denver west, CO and Bailey, CO: Denver, CO\",\n            \"title_sort\": \"Denver west, CO and Bailey, CO: Denver, CO\",\n            \"subtitle\": \"39105, digital raster graphic data\",\n            \"edition_count\": 1,\n            \"edition_key\": [\n                \"OL10945157M\"\n            ],\n            \"publish_date\": [\n                \"1996\"\n            ],\n            \"publish_year\": [\n                1996\n            ],\n            \"first_publish_year\": 1996,\n            \"isbn\": [\n                \"9780607620054\",\n                \"0607620056\"\n            ],\n            \"last_modified_i\": 1272517172,\n            \"ebook_count_i\": 0,\n            \"ebook_access\": \"no_ebook\",\n            \"has_fulltext\": false,\n            \"public_scan_b\": false,\n            \"publisher\": [\n                \"USGS Branch of Distribution\"\n            ],\n            \"language\": [\n                \"eng\"\n            ],\n            \"author_key\": [\n                \"OL79165A\"\n            ],\n            \"author_name\": [\n                \"United States Geological Survey\"\n            ],\n            \"author_alternative_name\": [\n                \"Geological Survey (U. S.)\",\n                \"Geological Survey (U.S.) 088\",\n                \"United States. Geological survey.\",\n                \"United States. Geological Survey\",\n                \"U.S. Geological Survey\",\n                \"Geological Survey. (U.S.)\",\n                \"Geological Survey (U .S.)\",\n                \"Geological Survey (U.S.)\",\n                \"United States. Geological Survey.\"\n            ],\n            \"publisher_facet\": [\n                \"USGS Branch of Distribution\"\n            ],\n            \"_version_\": 1767943587095379970,\n            \"author_facet\": [\n                \"OL79165A United States Geological Survey\"\n            ]\n        },\n        {\n            \"key\": \"/works/OL10910782M\",\n            \"type\": \"work\",\n            \"seed\": [\n                \"/books/OL10910782M\",\n                \"/works/OL10910782M\"\n            ],\n            \"title\": \"Denver, Co Vicinity (City Wall Maps)\",\n            \"title_suggest\": \"Denver, Co Vicinity (City Wall Maps)\",\n            \"title_sort\": \"Denver, Co Vicinity (City Wall Maps)\",\n            \"edition_count\": 1,\n            \"edition_key\": [\n                \"OL10910782M\"\n            ],\n            \"publish_date\": [\n                \"January 2001\"\n            ],\n            \"publish_year\": [\n                2001\n            ],\n            \"first_publish_year\": 2001,\n            \"isbn\": [\n                \"0762538627\",\n                \"9780762538621\"\n            ],\n            \"last_modified_i\": 1686044194,\n            \"ebook_count_i\": 0,\n            \"ebook_access\": \"no_ebook\",\n            \"has_fulltext\": false,\n            \"public_scan_b\": false,\n            \"publisher\": [\n                \"Universal Map Enterprises\"\n            ],\n            \"language\": [\n                \"eng\"\n            ],\n            \"publisher_facet\": [\n                \"Universal Map Enterprises\"\n            ],\n            \"_version_\": 1767945477546835968\n        }\n    ],\n    \"num_found\": 780,\n    \"q\": \"denver,co\",\n    \"offset\": null\n}"
+        }
+      },
+      "recorded_at": "Fri, 15 Dec 2023 21:49:31 GMT"
+    },
+    {
+      "request": {
+        "method": "get",
+        "uri": "https://openlibrary.org/api/books?bibkeys=OLID:OL10909613M,%20OL10911511M,%20OL8537031M,%20OL10945157M,%20OL10910782M&format=json&jscmd=viewapi",
+        "body": {
+          "encoding": "US-ASCII",
+          "string": ""
+        },
+        "headers": {
+          "User-Agent": [
+            "Faraday v2.7.11"
+          ],
+          "Accept-Encoding": [
+            "gzip;q=1.0,deflate;q=0.6,identity;q=0.3"
+          ],
+          "Accept": [
+            "*/*"
+          ]
+        }
+      },
+      "response": {
+        "status": {
+          "code": 200,
+          "message": "OK"
+        },
+        "headers": {
+          "Server": [
+            "nginx/1.18.0 (Ubuntu)"
+          ],
+          "Date": [
+            "Fri, 15 Dec 2023 21:49:32 GMT"
+          ],
+          "Content-Type": [
+            "application/json"
+          ],
+          "Transfer-Encoding": [
+            "chunked"
+          ],
+          "Connection": [
+            "keep-alive"
+          ],
+          "Access-Control-Allow-Origin": [
+            "*"
+          ],
+          "Access-Control-Allow-Method": [
+            "GET, OPTIONS"
+          ],
+          "Access-Control-Max-Age": [
+            "86400"
+          ],
+          "X-Ol-Stats": [
+            "\"MC 1 0.001 TT 0 0.004\""
+          ],
+          "Referrer-Policy": [
+            "no-referrer-when-downgrade"
+          ]
+        },
+        "body": {
+          "encoding": "UTF-8",
+          "string": "{\"OLID:OL10909613M\": {\"bib_key\": \"OLID:OL10909613M\", \"info_url\": \"https://openlibrary.org/books/OL10909613M/Denver_Co\", \"preview\": \"noview\", \"preview_url\": \"https://openlibrary.org/books/OL10909613M/Denver_Co\"}, \" OL10911511M\": {\"bib_key\": \" OL10911511M\", \"info_url\": \"https://openlibrary.org/books/OL10911511M/Denver_Co_Deluxe_Flip_Map\", \"preview\": \"noview\", \"preview_url\": \"https://openlibrary.org/books/OL10911511M/Denver_Co_Deluxe_Flip_Map\"}, \" OL8537031M\": {\"bib_key\": \" OL8537031M\", \"info_url\": \"https://openlibrary.org/books/OL8537031M/University_of_Denver_Co_2007\", \"preview\": \"noview\", \"preview_url\": \"https://openlibrary.org/books/OL8537031M/University_of_Denver_Co_2007\", \"thumbnail_url\": \"https://covers.openlibrary.org/b/id/1847337-S.jpg\"}, \" OL10945157M\": {\"bib_key\": \" OL10945157M\", \"info_url\": \"https://openlibrary.org/books/OL10945157M/Denver_west_CO_and_Bailey_CO_Denver_CO\", \"preview\": \"noview\", \"preview_url\": \"https://openlibrary.org/books/OL10945157M/Denver_west_CO_and_Bailey_CO_Denver_CO\"}, \" OL10910782M\": {\"bib_key\": \" OL10910782M\", \"info_url\": \"https://openlibrary.org/books/OL10910782M/Denver_Co_Vicinity_(City_Wall_Maps)\", \"preview\": \"noview\", \"preview_url\": \"https://openlibrary.org/books/OL10910782M/Denver_Co_Vicinity_(City_Wall_Maps)\"}}"
+        }
+      },
+      "recorded_at": "Fri, 15 Dec 2023 21:49:32 GMT"
     }
   ],
   "recorded_with": "VCR 6.2.0"
