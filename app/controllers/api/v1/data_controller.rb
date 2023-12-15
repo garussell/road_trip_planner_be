@@ -4,10 +4,11 @@ class Api::V1::DataController < ApplicationController
   def index
     location = params[:location]
     units = params[:units]
-    
+    quantity = params[:quantity]
+
     begin
       weather_data = get_forecast_data(location, units)
-      book_data = get_book_data(location)
+      book_data = get_book_data(location, quantity, units)
       picture_data = get_picture_data(location)
       combined_data = OpenStruct.new(
         id: nil,
@@ -34,8 +35,10 @@ class Api::V1::DataController < ApplicationController
     ForecastFacade.new(lat, lng, units).forecast
   end
 
-  def get_book_data(location)
-    BookSearchFacade.new(location: location).get_books
+  def get_book_data(location, quantity, units)
+    data = BookSearchFacade.new(location: location, quantity: quantity, units: units)
+ 
+    data.get_books
   end
 
   def get_picture_data(location)

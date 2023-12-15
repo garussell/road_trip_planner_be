@@ -1,14 +1,13 @@
 # frozen_string_literal: true
 
 class BookSearch
-  attr_reader :id, :destination, :forecast, :total_books_found, :books
+  attr_reader :id, :destination, :forecast, :books
 
   def initialize(location, data, units)
     @id = nil
-    @units = units
+    @units = units unless units.nil?
     @destination = location
     @forecast = get_forecast
-    @total_books_found = data[:numFound]
     @books = list_books(data)
   end
 
@@ -27,10 +26,13 @@ class BookSearch
   end
 
   def list_books(data)
-    data[:docs].map do |book|
+    data.map do |book|
       {
-        isbn: book[:isbn],
-        title: book[:title]
+        title: book[0][:title],
+        author: book[0][:author_name],
+        publish_year: book[0][:publish_year],
+        publisher: book[0][:publisher].first,
+        preview: book[1][1][:preview_url]
       }
     end
   end

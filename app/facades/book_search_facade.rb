@@ -8,7 +8,12 @@ class BookSearchFacade
   end
 
   def get_books
-    data = LibraryService.get_books(@location, @quantity)
-    BookSearch.new(@location, data, @units)
-  end
+    data = LibraryService.get_books(@location, 5)
+    olids = data[:docs].map { |book| book[:edition_key] }.flatten
+    previews = LibraryService.get_preview(olids)
+  
+    books_with_previews = data[:docs].zip(previews)
+
+    BookSearch.new(@location, books_with_previews, @units)
+  end  
 end
