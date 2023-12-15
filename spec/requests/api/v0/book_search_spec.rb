@@ -59,9 +59,6 @@ RSpec.describe 'GET /api/v0/book_search', :vcr do
       expect(book_search[:attributes][:forecast]).to have_key(:temperature)
       expect(book_search[:attributes][:forecast][:temperature]).to be_a(String)
 
-      expect(book_search[:attributes]).to have_key(:total_books_found)
-      expect(book_search[:attributes][:total_books_found]).to be_a(Integer)
-
       expect(book_search[:attributes]).to have_key(:books)
       expect(book_search[:attributes][:books]).to be_an(Array)
 

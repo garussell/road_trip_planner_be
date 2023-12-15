@@ -68,7 +68,8 @@ RSpec.describe 'Book Search', type: :poros do
                             author_facet: ['OL79165A United States Geological Survey'] }] }
 
       units = 'imperial'
-      book_search = BookSearch.new('denver,co', raw_data, units)
+      isbns = %w[0762507845 9780762507849 9780607620054 0607620056]
+      book_search = BookSearch.new('denver,co', raw_data, units, isbns)
 
       expect(book_search).to be_a(BookSearch)
       expect(book_search.id).to eq(nil)
@@ -76,7 +77,6 @@ RSpec.describe 'Book Search', type: :poros do
       expect(book_search.forecast).to be_a(Hash)
       expect(book_search.forecast[:summary]).to be_a(String)
       expect(book_search.forecast[:temperature]).to be_a(String)
-      expect(book_search.total_books_found).to be_a(Integer)
       expect(book_search.books).to be_a(Array)
     end
   end

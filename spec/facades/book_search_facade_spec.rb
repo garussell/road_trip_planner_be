@@ -19,7 +19,6 @@ RSpec.describe BookSearchFacade, :vcr do
       expect(results.forecast).to be_a(Hash)
       expect(results.forecast[:summary]).to be_a(String)
       expect(results.forecast[:temperature]).to be_a(String)
-      expect(results.total_books_found).to be_a(Integer)
     end
   end
 end
