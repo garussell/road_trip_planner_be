@@ -6,6 +6,7 @@ class Forecast
   def initialize(data, units)
     @id = nil
     @units = units
+    @timezone = data[:location][:tz_id]
     @current_weather = check_current_weather(data[:current])
     @daily_weather = check_daily_weather(data[:forecast][:forecastday])
     @hourly_weather = check_hourly_weather(data[:forecast][:forecastday][0][:hour])
@@ -21,6 +22,7 @@ class Forecast
     unit_data = unit_mapping[@units]
   
     {
+      last_updated_epoch: data[:last_updated_epoch],
       last_updated: data[:last_updated],
       temperature: data[unit_data[:temperature]],
       feels_like: data[unit_data[:feels_like]],
@@ -44,6 +46,7 @@ class Forecast
   
       {
         date: day[:date],
+        date_epoch: day[:date_epoch],
         sunrise: day[:astro][:sunrise],
         sunset: day[:astro][:sunset],
         max_temp: day[:day][unit_data[:max_temp]],
@@ -65,6 +68,7 @@ class Forecast
       unit_key = unit_mapping[@units]
   
       {
+        time_epoch: hour[:time_epoch],
         time: format_time(hour[:time]),
         temperature: hour[unit_key],
         condition: hour[:condition][:text],

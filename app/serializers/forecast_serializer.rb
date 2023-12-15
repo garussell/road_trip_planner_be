@@ -3,7 +3,7 @@
 class ForecastSerializer
   include JSONAPI::Serializer
   set_type 'forecast'
-  attributes :current_weather, :daily_weather, :hourly_weather
+  attributes :current_weather, :daily_weather, :hourly_weather, :timezone
 
   attribute :current_weather do |object|
     object.instance_variable_get(:@current_weather)
