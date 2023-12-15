@@ -49,7 +49,7 @@ RSpec.describe ForecastService, :vcr do
       expect(service[:forecast]).to have_key(:forecastday)
       expect(service[:forecast][:forecastday]).to be_a(Array)
 
-      expect(service[:forecast][:forecastday].count).to eq(5)
+      expect(service[:forecast][:forecastday].count).to eq(3)
       expect(service[:forecast][:forecastday][0]).to be_a(Hash)
 
       expect(service[:forecast][:forecastday][0]).to have_key(:date)

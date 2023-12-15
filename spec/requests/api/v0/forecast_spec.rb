@@ -103,7 +103,7 @@ RSpec.describe 'Forecast', type: :request do
         forecast = response_data[:data]
 
         # Current Weather
-        expect(forecast[:attributes][:current_weather]).to_not have_key(:last_updated_epoch)
+        expect(forecast[:attributes][:current_weather]).to have_key(:last_updated_epoch)
 
         expect(forecast[:attributes][:current_weather]).to_not have_key(:temp_c)
         expect(forecast[:attributes][:current_weather]).to_not have_key(:temp_f)
@@ -163,7 +163,7 @@ RSpec.describe 'Forecast', type: :request do
         expect(forecast[:attributes][:daily_weather][0]).to_not have_key(:daily_chance_of_snow)
 
         # Hourly Weather
-        expect(forecast[:attributes][:hourly_weather][0]).to_not have_key(:time_epoch)
+        expect(forecast[:attributes][:hourly_weather][0]).to have_key(:time_epoch)
         expect(forecast[:attributes][:hourly_weather][0]).to_not have_key(:temp_c)
 
         expect(forecast[:attributes][:hourly_weather][0]).to_not have_key(:is_day)

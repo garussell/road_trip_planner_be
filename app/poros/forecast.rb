@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 class Forecast
-  attr_reader :id, :current_weather, :daily_weather, :hourly_weather
+  attr_reader :id, :current_weather, :daily_weather, :hourly_weather, :timezone
 
   def initialize(data, units)
     @id = nil
