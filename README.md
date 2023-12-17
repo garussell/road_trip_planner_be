@@ -1,4 +1,4 @@
-# Whether, Sweater - Project README
+# Road Trip Planner - Project README
 # Back-End API
 
 <img width="1152" alt="Screenshot 2023-09-26 at 9 39 44 AM" src="https://github.com/garussell/whether_sweater/assets/125214565/935b660e-b208-46f6-9001-089c62c866b5">

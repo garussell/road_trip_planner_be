@@ -4,13 +4,12 @@ module Api
   module V0
     class RoadTripController < ApplicationController
       def create
-        user = User.authenticate(params[:api_key])
+        user = User.authenticate(params[:road_trip][:api_key])
 
         return render_unauthorized unless user
         return render_invalid_parameters unless valid_road_trip_params?
 
         road_trip = RoadTripFacade.create_road_trip(road_trip_params)
-
         if road_trip_valid?(road_trip)
           render json: RoadTripSerializer.new(road_trip), status: 200
         else
