@@ -25,13 +25,13 @@ RSpec.describe 'POST /api/v0/road_trip', :vcr do
 
   context 'happy path - valid params' do
     it 'returns a 200 status code' do
-      road_trip_params = {
-        origin: 'Denver,CO',
-        destination: 'Pueblo,CO',
-        units: 'imperial',
-        api_key: @api_key
+      post '/api/v0/road_trip', params: {
+        road_trip: {
+          origin: 'Denver, CO',
+          destination: 'Los Angeles, CA',
+          api_key: @api_key
+        }
       }
-      post '/api/v0/road_trip', params: road_trip_params
 
       expect(response).to be_successful
       expect(response.status).to eq(200)
@@ -76,7 +76,9 @@ RSpec.describe 'POST /api/v0/road_trip', :vcr do
         api_key: @api_key
       }
 
-      post '/api/v0/road_trip', params: road_trip_params
+      post '/api/v0/road_trip', params: {
+        road_trip: road_trip_params
+      }
 
       expect(response).to_not be_successful
       expect(response.status).to eq(422)
@@ -90,7 +92,9 @@ RSpec.describe 'POST /api/v0/road_trip', :vcr do
         api_key: 'invalid_api_key'
       }
 
-      post '/api/v0/road_trip', params: road_trip_params
+      post '/api/v0/road_trip', params: {
+        road_trip: road_trip_params
+      }
 
       expect(response).to_not be_successful
       expect(response.status).to eq(401)
@@ -104,7 +108,9 @@ RSpec.describe 'POST /api/v0/road_trip', :vcr do
         api_key: @api_key
       }
 
-      post '/api/v0/road_trip', params: road_trip_params
+      post '/api/v0/road_trip', params: {
+        road_trip: road_trip_params
+      }
 
       expect(response).to_not be_successful
       expect(response.status).to eq(404)
