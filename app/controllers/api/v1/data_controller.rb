@@ -12,6 +12,7 @@ class Api::V1::DataController < ApplicationController
       picture_data = get_picture_data(location)
       combined_data = OpenStruct.new(
         id: nil,
+        location: location,
         weather_data: weather_data, 
         book_data: book_data, 
         picture_data: picture_data
