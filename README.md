@@ -1,8 +1,8 @@
 # Road Trip Planner - Project README
 # Back-End API
 
-<img width="1152" alt="Screenshot 2023-09-26 at 9 39 44 AM" src="https://github.com/garussell/whether_sweater/assets/125214565/935b660e-b208-46f6-9001-089c62c866b5">
-<img width="838" alt="Screenshot 2023-09-26 at 9 45 46 AM" src="https://github.com/garussell/whether_sweater/assets/125214565/6f7c6aef-8868-4238-ada1-e8b2de6c6305">
+![Screenshot 2023-12-17 at 6 36 22 AM](https://github.com/garussell/road_trip_planner_be/assets/125214565/73a6bac3-9c97-4244-aed7-84279fe7da2d)
+![Screenshot 2023-12-17 at 6 36 09 AM](https://github.com/garussell/road_trip_planner_be/assets/125214565/f2c947db-a6bb-469d-a847-46752aa0a9f5)
 
 ## Table of Contents
 
