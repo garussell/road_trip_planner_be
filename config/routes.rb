@@ -9,7 +9,7 @@ Rails.application.routes.draw do
       resources :road_trip, only: [:create]
       resources :book_search, only: [:index]
       resources :backgrounds, only: [:index]
-
+      resources :movies, only: [:index]
     end
     
     namespace :v1 do
