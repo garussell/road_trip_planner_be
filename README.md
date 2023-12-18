@@ -1,5 +1,6 @@
 # Road Trip Planner - Project README
 # Back-End API
+[Front-End Repo](https://github.com/garussell/road-trip-planner)
 
 ![Screenshot 2023-12-17 at 6 36 22 AM](https://github.com/garussell/road_trip_planner_be/assets/125214565/73a6bac3-9c97-4244-aed7-84279fe7da2d)
 ![Screenshot 2023-12-17 at 6 36 09 AM](https://github.com/garussell/road_trip_planner_be/assets/125214565/f2c947db-a6bb-469d-a847-46752aa0a9f5)
@@ -40,6 +41,14 @@
 - [ShouldaMatchers](https://github.com/thoughtbot/shoulda-matchers) gem for testing assertions
 - [VCR](https://github.com/vcr/vcr) / [Webmock](https://github.com/bblimke/webmock) to stub HTTP requests in tests to simulate API interactions
 
+## How to Use
+- Fork/Clone the BE repo
+- `bundle install`
+- `rails s` to start server at `localhost:3000`
+- Hit the endpoints with Postman or your front-end
+- Optionally: visit the front-end repo, fork/clone,
+-   `npm install` then `nmp start` - select `Y` to run on `localhost:3001` for React
+
 ## Data Structure
 - `data` attribute contains `id=null`, `type="forecast"`, and `attributes`.
 - `attributes` is an object that contains weather information: `current_weather`
@@ -48,6 +57,7 @@
 - `hourly_weather` holds array of 24 hours data for current day‘‘‘: `time` (format "22:00"), `temperature` (float / Fahrenheit), `conditions` (string / per hour), `icon` (png string for weather condition per hour)
 
 ## End-Points
+- Get data as one endpoint: `GET /api/v1/data` - takes in 'location' as a param.
 - Get weather for a city: `GET /api/v0/forecast?location=cincinatti,oh` - data can be sent as params, `units` are optional ("imperial" or "metric") - Units default to imperial.
 - User Registration: `POST /api/v0/users` - raw data needs to be sent in the body of the request
 - Login: `POST /api/v0/sessions` - raw data needs to be sent in the body of the request
